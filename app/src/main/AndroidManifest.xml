@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nitjsr.urja1920">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name="com.nitjsr.urja1920.WhatsApp.StickerApplication"
+        android:largeHeap="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.nitjsr.urja1920.Activities.HomeActivity"
+            android:label="@string/title_activity_home">
+
+        </activity>
+        <activity android:name="com.nitjsr.urja1920.Activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.nitjsr.urja1920.WhatsApp.EntryActivity"/>
+        <activity android:name="com.nitjsr.urja1920.WhatsApp.StickerPackListActivity"
+            android:label="@string/title_activity_sticker_packs_list"/>
+        <activity android:name="com.nitjsr.urja1920.WhatsApp.StickerPackDetailsActivity"
+            android:parentActivityName="com.nitjsr.urja1920.WhatsApp.StickerPackListActivity"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nitjsr.urja1920.WhatsApp.StickerPackListActivity" />
+        </activity>
+        <activity android:name="com.nitjsr.urja1920.WhatsApp.StickerPackInfoActivity"
+            android:label="@string/title_activity_sticker_pack_info"
+            android:parentActivityName="com.nitjsr.urja1920.WhatsApp.StickerPackDetailsActivity"
+            tools:ignore="UnusedAttribute">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nitjsr.urja1920.WhatsApp.StickerPackDetailsActivity" />
+        </activity>
+
+        <provider
+            android:name="com.nitjsr.urja1920.WhatsApp.StickerContentProvider"
+            android:authorities="${contentProviderAuthority}"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.whatsapp.sticker.READ" />
+    </application>
+
+</manifest>
