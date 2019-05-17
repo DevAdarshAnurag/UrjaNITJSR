@@ -2,44 +2,55 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nitjsr.urja1920">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".WhatsApp.StickerApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name="com.nitjsr.urja1920.WhatsApp.StickerApplication"
-        android:largeHeap="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity
-            android:name="com.nitjsr.urja1920.Activities.HomeActivity"
-            android:label="@string/title_activity_home">
+        <activity android:name=".Activities.MapActivity"></activity>
 
-        </activity>
-        <activity android:name="com.nitjsr.urja1920.Activities.SplashActivity">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Activities.HomeActivity"
+            android:label="@string/title_activity_home"></activity>
+        <activity android:name=".Activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.nitjsr.urja1920.WhatsApp.EntryActivity"/>
-        <activity android:name="com.nitjsr.urja1920.WhatsApp.StickerPackListActivity"
-            android:label="@string/title_activity_sticker_packs_list"/>
-        <activity android:name="com.nitjsr.urja1920.WhatsApp.StickerPackDetailsActivity"
-            android:parentActivityName="com.nitjsr.urja1920.WhatsApp.StickerPackListActivity"
+        <activity android:name=".WhatsApp.EntryActivity" />
+        <activity
+            android:name=".WhatsApp.StickerPackListActivity"
+            android:label="@string/title_activity_sticker_packs_list" />
+        <activity
+            android:name=".WhatsApp.StickerPackDetailsActivity"
+            android:parentActivityName=".WhatsApp.StickerPackListActivity"
             tools:ignore="UnusedAttribute">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nitjsr.urja1920.WhatsApp.StickerPackListActivity" />
         </activity>
-        <activity android:name="com.nitjsr.urja1920.WhatsApp.StickerPackInfoActivity"
+        <activity
+            android:name=".WhatsApp.StickerPackInfoActivity"
             android:label="@string/title_activity_sticker_pack_info"
-            android:parentActivityName="com.nitjsr.urja1920.WhatsApp.StickerPackDetailsActivity"
+            android:parentActivityName=".WhatsApp.StickerPackDetailsActivity"
             tools:ignore="UnusedAttribute">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -47,7 +58,7 @@
         </activity>
 
         <provider
-            android:name="com.nitjsr.urja1920.WhatsApp.StickerContentProvider"
+            android:name=".WhatsApp.StickerContentProvider"
             android:authorities="${contentProviderAuthority}"
             android:enabled="true"
             android:exported="true"

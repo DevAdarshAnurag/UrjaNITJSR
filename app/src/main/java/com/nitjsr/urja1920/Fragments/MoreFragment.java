@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.nitjsr.urja1920.Activities.MapActivity;
 import com.nitjsr.urja1920.Adapters.MoreListViewAdapter;
 import com.nitjsr.urja1920.Models.MoreItem;
 import com.nitjsr.urja1920.R;
@@ -56,6 +57,10 @@ public class MoreFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position == 2) {//stickers
                     Intent intent = new Intent(getActivity(), EntryActivity.class);
+                    startActivity(intent);
+                }
+                else if(position == 3){//maps
+                    Intent intent = new Intent(getActivity(), MapActivity.class);
                     startActivity(intent);
                 }
             }
