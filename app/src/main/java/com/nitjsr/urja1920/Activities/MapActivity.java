@@ -30,7 +30,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         LatLng loc = new LatLng(22.776913, 86.144633);
         LatLng hockeyGround = new LatLng(22.772673, 86.143152);
         LatLng tsg = new LatLng(22.775032, 86.143945);
-       LatLng upsGround = new LatLng(22.780951, 86.143343);
+        LatLng upsGround = new LatLng(22.780951, 86.143343);
 //        LatLng hockeyGround = new LatLng();
 //        LatLng hockeyGround = new LatLng();
 //        LatLng hockeyGround = new LatLng();
@@ -48,19 +48,19 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         googleMap.addMarker(new MarkerOptions().position(upsGround).title("Football Ground"));
     }
 
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        //for hiding screen navigation buttons and show them when required by user; providing immersive display
-        if (hasFocus) {
-            getWindow().getDecorView().setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-
-        }
-    }
+//    @Override
+//    public void onWindowFocusChanged(boolean hasFocus) {
+//        super.onWindowFocusChanged(hasFocus);
+//        //for hiding screen navigation buttons and show them when required by user; providing immersive display
+//        if (hasFocus) {
+//            getWindow().getDecorView().setSystemUiVisibility(
+//                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+//                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+//                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+//
+//        }
+//    }
 }
