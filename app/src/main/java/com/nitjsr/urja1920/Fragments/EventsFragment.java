@@ -22,7 +22,7 @@ import java.util.List;
 public class EventsFragment extends Fragment {
 
     int[] images = {R.drawable.athletics, R.drawable.cricket, R.drawable.badminton,R.drawable.volleyball,R.drawable.basketball,
-            R.drawable.hockey,R.drawable.chess,R.drawable.table_tennis};
+            R.drawable.hockey,R.drawable.chess,R.drawable.table_tennis,R.drawable.splash_urja};
     RecyclerView eventRecyclerView;
 
     public EventsFragment() {
@@ -37,6 +37,7 @@ public class EventsFragment extends Fragment {
         List<Events> list = new ArrayList<Events>();
         list.add(new Events("Athletics", images[0]));
         list.add(new Events("Cricket", images[1]));
+        list.add(new Events("Football",images[8]));
         list.add(new Events("Badminton", images[2]));
         list.add(new Events("Volleyball",images[3]));
         list.add(new Events("Basketball",images[4]));
