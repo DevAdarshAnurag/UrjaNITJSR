@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.nitjsr.urja1920.Activities.MapActivity;
+import com.nitjsr.urja1920.Activities.NotificationSettingsActivity;
 import com.nitjsr.urja1920.Adapters.MoreListViewAdapter;
 import com.nitjsr.urja1920.Models.MoreItem;
 import com.nitjsr.urja1920.R;
@@ -26,6 +27,7 @@ import java.util.List;
 public class MoreFragment extends Fragment {
 
     ListView listView;
+
     public MoreFragment() {
         // Required empty public constructor
     }
@@ -41,25 +43,30 @@ public class MoreFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         List<MoreItem> moreItems = new ArrayList<>();
-        moreItems.add(new MoreItem("Notifications",R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Sponsors",R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Stickers",R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Maps",R.mipmap.ic_launcher_round));
-        moreItems.add(new MoreItem("Share",R.mipmap.ic_launcher_round));
-        moreItems.add(new MoreItem("Rate us",R.mipmap.ic_launcher_round));
-        moreItems.add(new MoreItem("Website",R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Gallery",R.mipmap.ic_launcher_round));
+        moreItems.add(new MoreItem("Notifications", R.mipmap.ic_launcher));
+        moreItems.add(new MoreItem("Sponsors", R.mipmap.ic_launcher));
+        moreItems.add(new MoreItem("Stickers", R.mipmap.ic_launcher));
+        moreItems.add(new MoreItem("Maps", R.mipmap.ic_launcher_round));
+        moreItems.add(new MoreItem("Share", R.mipmap.ic_launcher_round));
+        moreItems.add(new MoreItem("Rate us", R.mipmap.ic_launcher_round));
+        moreItems.add(new MoreItem("Website", R.mipmap.ic_launcher));
+        moreItems.add(new MoreItem("Gallery", R.mipmap.ic_launcher_round));
         listView = view.findViewById(R.id.more_list_view);
-        listView.setAdapter(new MoreListViewAdapter(moreItems,getContext()));
+        listView.setAdapter(new MoreListViewAdapter(moreItems, getContext()));
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position == 2) {//stickers
-                    Intent intent = new Intent(getActivity(), EntryActivity.class);
+                if(position ==0){//notifications
+                    Intent intent = new Intent(getActivity(), NotificationSettingsActivity.class);
                     startActivity(intent);
                 }
-                else if(position == 3){//maps
+                else if (position == 1) {//sponsors
+
+                } else if (position == 2) {//stickers
+                    Intent intent = new Intent(getActivity(), EntryActivity.class);
+                    startActivity(intent);
+                } else if (position == 3) {//maps
                     Intent intent = new Intent(getActivity(), MapActivity.class);
                     startActivity(intent);
                 }
