@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@id/leaderboard_head"
-        android:background="#000"
+        android:background="@color/colorPrimaryDark"
         android:elevation="4dp" />
 
     <android.support.v7.widget.RecyclerView
