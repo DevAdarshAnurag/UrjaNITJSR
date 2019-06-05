@@ -11,5 +11,6 @@ public class NotificationSettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification_settings);
+        overridePendingTransition(0, 0);
     }
 }
