@@ -26,6 +26,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_notify"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -58,6 +59,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_atheletics"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -80,6 +82,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_cricket"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -102,6 +105,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_football"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -124,6 +128,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_basketball"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -146,6 +151,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_volleyball"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -168,6 +174,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_hockey"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -190,6 +197,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:id="@+id/switch_chess"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -211,6 +219,7 @@
             />
         <Switch
             android:layout_width="0dp"
+            android:id="@+id/switch_badminton"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
     </LinearLayout>
@@ -233,6 +242,7 @@
             />
         <Switch
             android:layout_width="0dp"
+            android:id="@+id/switch_tt"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
     </LinearLayout>

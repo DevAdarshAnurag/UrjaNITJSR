@@ -5,6 +5,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -34,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
         createNotificationChannel();
-        checkNetwork();
+        dbCheck();
         overridePendingTransition(R.anim.magic, 0);
     }
 
@@ -67,6 +68,22 @@ public class SplashActivity extends AppCompatActivity {
 
     private void doWork() {
         try {
+            SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
+            if(!pref.getBoolean("First",false)) {
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putBoolean("Notify", true);
+                editor.putBoolean("Athletics", true);
+                editor.putBoolean("Cricket", true);
+                editor.putBoolean("Football", true);
+                editor.putBoolean("Basketball", true);
+                editor.putBoolean("Volleyball", true);
+                editor.putBoolean("Hockey", true);
+                editor.putBoolean("Chess", true);
+                editor.putBoolean("Badminton", true);
+                editor.putBoolean("Table Tennis", true);
+                editor.putBoolean("First",true);
+                editor.apply();
+            }
             Thread.sleep(1500);
         } catch (Exception e) {
             e.printStackTrace();
@@ -87,28 +104,6 @@ public class SplashActivity extends AppCompatActivity {
             // or other notification behaviors after this
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
-        }
-    }
-
-    private void checkNetwork() {
-        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        if(activeNetworkInfo != null && activeNetworkInfo.isConnected())
-            dbCheck();
-        else
-        {
-            android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(SplashActivity.this);
-            builder.setTitle("Not connected to network");
-            builder.setMessage("Connect to a network to proceed...");
-            builder.setCancelable(false);
-            builder.setPositiveButton("Try Again", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                    checkNetwork();
-                }
-            });
-            builder.show();
         }
     }
 
