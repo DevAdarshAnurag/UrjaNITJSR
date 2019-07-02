@@ -22,7 +22,7 @@ public class NotificationSettingsActivity extends AppCompatActivity implements C
         overridePendingTransition(0, 0);
 
         notifications = findViewById(R.id.switch_notify);
-        athletics = findViewById(R.id.switch_atheletics);
+        athletics = findViewById(R.id.switch_athletics);
         cricket = findViewById(R.id.switch_cricket);
         football = findViewById(R.id.switch_football);
         basketball = findViewById(R.id.switch_basketball);
@@ -40,7 +40,7 @@ public class NotificationSettingsActivity extends AppCompatActivity implements C
         else{
             disableSwitch();
         }
-        if(pref.getBoolean("Atheletics",true)){
+        if(pref.getBoolean("Athletics",true)){
             athletics.setChecked(true);
         }
         if(pref.getBoolean("Cricket",true)){
@@ -93,11 +93,11 @@ public class NotificationSettingsActivity extends AppCompatActivity implements C
                 disableSwitch();
             }
         }
-        if(buttonView.getId() == R.id.switch_atheletics) {
+        if(buttonView.getId() == R.id.switch_athletics) {
             if(isChecked)
-                editor.putBoolean("Atheletics",true);
+                editor.putBoolean("Athletics",true);
             else{
-                editor.putBoolean("Atheletics",false);
+                editor.putBoolean("Athletics",false);
             }
         }
         if(buttonView.getId() == R.id.switch_cricket) {
@@ -169,6 +169,7 @@ public class NotificationSettingsActivity extends AppCompatActivity implements C
         chess.setEnabled(false);
         badminton.setEnabled(false);
         tt.setEnabled(false);
+
         athletics.setChecked(false);
         cricket.setChecked(false);
         basketball.setChecked(false);
@@ -178,6 +179,17 @@ public class NotificationSettingsActivity extends AppCompatActivity implements C
         badminton.setChecked(false);
         chess.setChecked(false);
         football.setChecked(false);
+
+        editor.putBoolean("Athletics", false);
+        editor.putBoolean("Cricket", false);
+        editor.putBoolean("Football", false);
+        editor.putBoolean("Volleyball", false);
+        editor.putBoolean("Basketball", false);
+        editor.putBoolean("Table Tennis", false);
+        editor.putBoolean("Badminton", false);
+        editor.putBoolean("Hockey", false);
+        editor.putBoolean("Chess", false);
+        editor.apply();
     }
 
     private void enableSwitch() {

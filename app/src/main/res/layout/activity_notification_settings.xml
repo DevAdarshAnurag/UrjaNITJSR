@@ -59,7 +59,7 @@
         <Switch
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/switch_atheletics"
+            android:id="@+id/switch_athletics"
             android:layout_weight="1"/>
     </LinearLayout>
 
