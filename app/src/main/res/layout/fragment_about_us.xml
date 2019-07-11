@@ -1,21 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.AboutUsFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
-        <fr.rolandl.carousel.Carousel
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/carousel"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:animationDuration="200"
-            />
-    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/abs_ll1"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:src="@color/colorPrimary" />
 
-</FrameLayout>
+    <LinearLayout
+        android:id="@+id/abs_ll2"
+        android:layout_width="128dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:src="@color/colorPrimary" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ1"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_above="@id/abs_ll2"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/abs_ll1"
+        android:src="@color/colorPrimary"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="4dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ2"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_above="@id/abs_ll2"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/abs_ll1"
+        android:src="@color/colorPrimary"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="4dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ3"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_below="@id/abs_ll2"
+        android:layout_centerHorizontal="true"
+        android:src="@color/colorPrimary"
+        app:civ_border_color="@color/colorAccent"
+        app:civ_border_width="4dp" />
+
+</RelativeLayout>

@@ -7,17 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.nitjsr.urja1920.Adapters.MyCarouselAdapter;
-import com.nitjsr.urja1920.Models.Photo;
 import com.nitjsr.urja1920.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import fr.rolandl.carousel.Carousel;
-import fr.rolandl.carousel.CarouselAdapter;
-import fr.rolandl.carousel.CarouselBaseAdapter;
+import de.hdodenhof.circleimageview.CircleImageView;
+import hari.bounceview.BounceView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,27 +34,14 @@ public class AboutUsFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         super.onActivityCreated(savedInstanceState);
-        final Carousel carousel = (Carousel) view.findViewById(R.id.carousel);
 
-        final List<Photo> photos = new ArrayList<>();
-        photos.add(new Photo("Developers", R.mipmap.ic_launcher));
-        photos.add(new Photo("Team Urja", R.mipmap.ic_launcher));
-        photos.add(new Photo("About Us", R.mipmap.ic_launcher_round));
-
-        final CarouselAdapter adapter = new MyCarouselAdapter(getContext(), photos);
-        carousel.setAdapter(adapter);
-        carousel.setSelection(2, true);
-        adapter.notifyDataSetChanged();
-        carousel.setOnItemClickListener(new CarouselBaseAdapter.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(CarouselBaseAdapter<?> carouselBaseAdapter, View view, int position, long id) {
-                //Toast.makeText(getContext(), "The item '" + position + "' has been clicked", Toast.LENGTH_SHORT).show();
-                carousel.scrollToChild(position);
-            }
-
-        });
-
+        CircleImageView civ_dev, civ_team, civ_abs;
+        civ_dev = view.findViewById(R.id.civ1);
+        civ_team = view.findViewById(R.id.civ2);
+        civ_abs = view.findViewById(R.id.civ3);
+        BounceView.addAnimTo(civ_dev);//.setScaleForPopOutAnim(0f, 0f);
+        BounceView.addAnimTo(civ_team);//.setScaleForPopOutAnim(0f, 0f);
+        BounceView.addAnimTo(civ_abs);//.setScaleForPopOutAnim(0f, 0f);
     }
 
 }
