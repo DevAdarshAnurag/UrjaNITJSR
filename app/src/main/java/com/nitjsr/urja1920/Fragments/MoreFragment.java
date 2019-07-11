@@ -13,6 +13,7 @@ import android.widget.ListView;
 
 import com.nitjsr.urja1920.Activities.MapActivity;
 import com.nitjsr.urja1920.Activities.NotificationSettingsActivity;
+import com.nitjsr.urja1920.Activities.SponsorsActivity;
 import com.nitjsr.urja1920.Adapters.MoreListViewAdapter;
 import com.nitjsr.urja1920.Models.MoreItem;
 import com.nitjsr.urja1920.R;
@@ -57,18 +58,26 @@ public class MoreFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==0){//notifications
+                if (position == 0) {//notifications
                     Intent intent = new Intent(getActivity(), NotificationSettingsActivity.class);
                     startActivity(intent);
-                }
-                else if (position == 1) {//sponsors
-
+                } else if (position == 1) {//sponsors
+                    Intent intent = new Intent(getActivity(), SponsorsActivity.class);
+                    startActivity(intent);
                 } else if (position == 2) {//stickers
                     Intent intent = new Intent(getActivity(), EntryActivity.class);
                     startActivity(intent);
                 } else if (position == 3) {//maps
                     Intent intent = new Intent(getActivity(), MapActivity.class);
                     startActivity(intent);
+                } else if (position == 4) {//share
+
+                } else if (position == 5) {//rate us
+
+                } else if (position == 6) {//website
+
+                } else if (position == 7) {//gallery
+
                 }
             }
         });

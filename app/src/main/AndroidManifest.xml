@@ -17,7 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.NotificationSettingsActivity"></activity>
+        <activity android:name=".Activities.SponsorsActivity"></activity>
+        <activity android:name=".Activities.NotificationSettingsActivity" />
         <activity android:name=".Activities.MapActivity" />
 
         <uses-library
