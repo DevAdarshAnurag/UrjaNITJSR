@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
-import android.widget.Toast;
 
 import com.nitjsr.urja1920.Activities.HomeActivity;
 import com.nitjsr.urja1920.Activities.SplashActivity;
@@ -20,7 +19,7 @@ public class NotificationHelper {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 
         SharedPreferences pref = context.getApplicationContext().getSharedPreferences("MyPref", 0);
-        if(pref.getBoolean(title,true)) {
+        if (pref.getBoolean(title, true)) {
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, SplashActivity.CHANNEL_ID)
                     .setSmallIcon(R.drawable.splash_urja)
                     .setContentTitle(title)

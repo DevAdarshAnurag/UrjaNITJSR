@@ -17,9 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.SponsorsActivity"></activity>
-        <activity android:name=".Activities.NotificationSettingsActivity" />
-        <activity android:name=".Activities.MapActivity" />
+        <activity
+            android:name=".Activities.SponsorsActivity"
+            android:label="@string/title_activity_home"></activity>
+        <activity
+            android:name=".Activities.NotificationSettingsActivity"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".Activities.MapActivity"
+            android:label="@string/title_activity_home"></activity>
 
         <uses-library
             android:name="org.apache.http.legacy"
