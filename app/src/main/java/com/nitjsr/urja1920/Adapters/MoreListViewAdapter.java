@@ -14,6 +14,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import hari.bounceview.BounceView;
+
 public class MoreListViewAdapter extends BaseAdapter {
     List<MoreItem>moreItems;
     Context context;
@@ -48,6 +50,7 @@ public class MoreListViewAdapter extends BaseAdapter {
         MoreItem item = moreItems.get(position);
         txtName.setText(item.name);
         Picasso.get().load(item.imageId).into(imgCountry);
+        BounceView.addAnimTo(convertView);
         return convertView;
     }
 }
