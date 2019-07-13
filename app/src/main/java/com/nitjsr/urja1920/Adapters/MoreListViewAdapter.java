@@ -1,25 +1,29 @@
 package com.nitjsr.urja1920.Adapters;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nitjsr.urja1920.Models.MoreItem;
 import com.nitjsr.urja1920.R;
+import com.nitjsr.urja1920.Utilities.BounceView;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import hari.bounceview.BounceView;
-
 public class MoreListViewAdapter extends BaseAdapter {
-    List<MoreItem>moreItems;
+    List<MoreItem> moreItems;
     Context context;
     LayoutInflater layoutInflater;
+    public static final AccelerateDecelerateInterpolator DEFAULT_INTERPOLATOR = new AccelerateDecelerateInterpolator();
 
     public MoreListViewAdapter(List<MoreItem> moreItems, Context context) {
         this.moreItems = moreItems;
@@ -44,7 +48,7 @@ public class MoreListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView =  layoutInflater.inflate(R.layout.more_list_item, parent, false);
+        convertView = layoutInflater.inflate(R.layout.more_list_item, parent, false);
         ImageView imgCountry = convertView.findViewById(R.id.more_image);
         TextView txtName = convertView.findViewById(R.id.more_text);
         MoreItem item = moreItems.get(position);
@@ -53,4 +57,5 @@ public class MoreListViewAdapter extends BaseAdapter {
         BounceView.addAnimTo(convertView);
         return convertView;
     }
+
 }

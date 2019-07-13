@@ -7,10 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import com.nitjsr.urja1920.R;
+import com.nitjsr.urja1920.Utilities.BounceView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import hari.bounceview.BounceView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -39,9 +40,7 @@ public class AboutUsFragment extends Fragment {
         civ_dev = view.findViewById(R.id.civ1);
         civ_team = view.findViewById(R.id.civ2);
         civ_abs = view.findViewById(R.id.civ3);
-        BounceView.addAnimTo(civ_dev);//.setScaleForPopOutAnim(0f, 0f);
-        BounceView.addAnimTo(civ_team);//.setScaleForPopOutAnim(0f, 0f);
-        BounceView.addAnimTo(civ_abs);//.setScaleForPopOutAnim(0f, 0f);
+        BounceView.addAnimTo(civ_dev);
     }
 
 }
