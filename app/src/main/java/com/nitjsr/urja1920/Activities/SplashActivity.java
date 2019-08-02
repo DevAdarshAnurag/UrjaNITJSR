@@ -108,7 +108,10 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void dbCheck(){
-        dbRef = FirebaseDatabase.getInstance().getReference("ready");
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseDatabase.setPersistenceEnabled(true);
+        dbRef = firebaseDatabase.getReference("ready");
+        dbRef.keepSynced(true);
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
