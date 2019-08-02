@@ -8,4 +8,12 @@ public class MoreItem {
         this.name = name;
         this.imageId = imageId;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getImageId() {
+        return imageId;
+    }
 }
