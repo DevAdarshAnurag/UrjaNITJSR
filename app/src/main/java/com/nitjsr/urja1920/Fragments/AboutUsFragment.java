@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.nitjsr.urja1920.R;
-import com.nitjsr.urja1920.Utilities.BounceView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -40,7 +39,6 @@ public class AboutUsFragment extends Fragment {
         civ_dev = view.findViewById(R.id.civ1);
         civ_team = view.findViewById(R.id.civ2);
         civ_abs = view.findViewById(R.id.civ3);
-        BounceView.addAnimTo(civ_dev);
     }
 
 }

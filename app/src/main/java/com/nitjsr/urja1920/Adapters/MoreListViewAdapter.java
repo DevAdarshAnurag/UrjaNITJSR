@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.nitjsr.urja1920.Models.MoreItem;
 import com.nitjsr.urja1920.R;
-import com.nitjsr.urja1920.Utilities.BounceView;
 
 import java.util.List;
 
@@ -34,7 +33,6 @@ public class MoreListViewAdapter extends ArrayAdapter<MoreItem> {
         imgCountry.setImageResource(item.getImageId());
         TextView txtName = view.findViewById(R.id.more_text);
         txtName.setText(item.getName());
-        BounceView.addAnimTo(view);
         return view;
     }
 
