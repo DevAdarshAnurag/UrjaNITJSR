@@ -4,13 +4,12 @@ package com.nitjsr.urja1920.Fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.nitjsr.urja1920.R;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,10 +34,10 @@ public class AboutUsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         super.onActivityCreated(savedInstanceState);
 
-        CircleImageView civ_dev, civ_team, civ_abs;
-        civ_dev = view.findViewById(R.id.civ1);
-        civ_team = view.findViewById(R.id.civ2);
-        civ_abs = view.findViewById(R.id.civ3);
+        CardView civ_dev, civ_team, civ_abs;
+        civ_dev = view.findViewById(R.id.cv1);
+        civ_team = view.findViewById(R.id.cv2);
+        civ_abs = view.findViewById(R.id.cv3);
     }
 
 }
