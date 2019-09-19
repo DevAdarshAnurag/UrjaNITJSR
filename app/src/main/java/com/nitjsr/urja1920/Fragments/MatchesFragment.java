@@ -48,7 +48,7 @@ public class MatchesFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        rvMatchesLive = view.findViewById(R.id.rv_results);
+        rvMatchesLive = view.findViewById(R.id.rv_matxhes_live);
         List<Fixture> fixtureList = new ArrayList<>();
 
         rvMatchesLive.setLayoutManager(new LinearLayoutManager(getContext()));
