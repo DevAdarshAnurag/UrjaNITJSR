@@ -35,7 +35,7 @@ public class SplashActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
         createNotificationChannel();
-        dbCheck();
+        goHome();
         overridePendingTransition(R.anim.magic, 0);
     }
 
@@ -105,61 +105,6 @@ public class SplashActivity extends AppCompatActivity {
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
-    }
-
-    private void dbCheck(){
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        firebaseDatabase.setPersistenceEnabled(true);
-        dbRef = firebaseDatabase.getReference("ready");
-        dbRef.keepSynced(true);
-        dbRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ready = dataSnapshot.getValue(String.class);
-                if (ready.equalsIgnoreCase("yes"))
-                    goHome();
-                else {
-                    android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(SplashActivity.this);
-                    if (ready.equalsIgnoreCase("update")) {
-                        builder.setTitle("Update Available");
-                        builder.setMessage("Update Urja app to stay connected...");
-                        builder.setCancelable(false);
-                        builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                                Intent i = new Intent(Intent.ACTION_VIEW);
-                                i.setData(Uri.parse("https://www.google.com"));
-                                startActivity(i);
-                                System.gc();
-                                System.exit(0);
-                            }
-                        });
-                    } else {
-                        builder.setTitle("Server Under Maintenance");
-                        builder.setMessage("Please try later");
-                        builder.setCancelable(false);
-                        builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                                System.gc();
-                                System.exit(0);
-                            }
-                        });
-                    }
-                    try {//do not remove try catch block
-                        builder.show();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-            }
-        });
     }
 
 }
