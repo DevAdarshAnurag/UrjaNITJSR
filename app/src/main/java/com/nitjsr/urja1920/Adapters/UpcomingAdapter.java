@@ -18,6 +18,7 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHo
 
     Context context;
     List<Fixture> fixtureList;
+    private onItemClicked onClick;
 
     public UpcomingAdapter(Context context, List<Fixture> fixtureList) {
         this.context = context;
@@ -44,6 +45,12 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHo
         viewHolder.matchset3.setVisibility(View.GONE);
         viewHolder.matchset4.setVisibility(View.GONE);
         viewHolder.matchset5.setVisibility(View.GONE);
+        viewHolder.matchName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClick.onItemClick(i);
+            }
+        });
     }
 
     @Override
@@ -55,6 +62,14 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHo
     @Override
     public int getItemCount() {
         return fixtureList.size();
+    }
+
+    public void setOnClick(onItemClicked onClick) {
+        this.onClick = onClick;
+    }
+
+    public interface onItemClicked {
+        void onItemClick(int position);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

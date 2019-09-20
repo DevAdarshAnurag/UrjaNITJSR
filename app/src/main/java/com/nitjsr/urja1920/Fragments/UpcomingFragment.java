@@ -1,7 +1,9 @@
 package com.nitjsr.urja1920.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -26,22 +28,27 @@ import com.nitjsr.urja1920.Adapters.UpcomingAdapter;
 import com.nitjsr.urja1920.Models.Fixture;
 import com.nitjsr.urja1920.R;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class UpcomingFragment extends Fragment {
+public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItemClicked {
 
 
     private DatabaseReference dbRef;
     RecyclerView rvUpcoming;
     UpcomingAdapter adapter;
     private int type = -1;
+    List<Fixture>fixtureList = new ArrayList<>();
+
     public UpcomingFragment() {
         // Required empty public constructor
     }
@@ -64,9 +71,9 @@ public class UpcomingFragment extends Fragment {
             tabLayout.addTab(tabLayout.newTab().setText(tabNames[i]));
         }
         rvUpcoming = view.findViewById(R.id.rv_upcomings);
-        List<Fixture>fixtureList = new ArrayList<>();
         rvUpcoming.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new UpcomingAdapter(getContext(),fixtureList);
+        adapter.setOnClick(UpcomingFragment.this);
         rvUpcoming.setAdapter(adapter);
         fixtureFetch(fixtureList);
 
@@ -175,5 +182,30 @@ public class UpcomingFragment extends Fragment {
                 }
             }
         });
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/dd/MM");
+        Fixture fix = fixtureList.get(position);
+        String date = fix.getDate();
+        date = "2020/"+date;
+        long timeInMilliseconds=0;
+        Date mDate = null;
+        try {
+            mDate = sdf.parse(date);
+            timeInMilliseconds = mDate.getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        Intent intent = new Intent(Intent.ACTION_INSERT)
+                .setData(CalendarContract.Events.CONTENT_URI)
+                .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME,timeInMilliseconds)
+                .putExtra(CalendarContract.Events.TITLE, fix.getRoundName())
+                .putExtra(CalendarContract.Events.DESCRIPTION, fix.getTeam1()+fix.getTeam2())
+                .putExtra(CalendarContract.Events.EVENT_LOCATION, "The gym")
+                .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
+                .putExtra(Intent.EXTRA_EMAIL, "rowan@example.com,trevor@example.com");
+        startActivity(intent);
     }
 }
