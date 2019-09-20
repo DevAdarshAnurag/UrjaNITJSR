@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,19 +20,24 @@ import com.nitjsr.urja1920.Adapters.UpcomingAdapter;
 import com.nitjsr.urja1920.Models.Fixture;
 import com.nitjsr.urja1920.R;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class MatchesFragment extends Fragment {
 
-    private DatabaseReference dbRef;
     RecyclerView rvMatchesLive;
     UpcomingAdapter adapter;
+    private DatabaseReference dbRef;
+
     public MatchesFragment() {
         // Required empty public constructor
     }
@@ -52,7 +56,7 @@ public class MatchesFragment extends Fragment {
         List<Fixture> fixtureList = new ArrayList<>();
 
         rvMatchesLive.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new UpcomingAdapter(getContext(),fixtureList);
+        adapter = new UpcomingAdapter(getContext(), fixtureList);
         rvMatchesLive.setAdapter(adapter);
         fixtureFetch(fixtureList);
     }
@@ -64,65 +68,37 @@ public class MatchesFragment extends Fragment {
             public int compare(Fixture f1, Fixture f2) {
                 String d1 = f1.getDate();
                 String d2 = f2.getDate();
-                String s1[] = d1.split(" ",0);
-                String s2[] = d2.split(" ",0);
-                Log.d("date",s1[0]+" "+s1[1]+" "+s1[2]);
-                Log.d("date",s2[0]+" "+s2[1]+" "+s2[2]);
-                int day1 = Integer.parseInt(s1[0].substring(0,2));
-                int day2 = Integer.parseInt(s2[0].substring(0,2));
-                int month1 = Integer.parseInt(s1[0].substring(3,5));
-                int month2 = Integer.parseInt(s2[0].substring(3,5));
-                if(month1 < month2)
-                    return 1;
-                else if(month1 > month2)
-                    return -1;
-                else{
-                    if(day1 < day2)
-                        return 1;
-                    else if(day1 > day2)
-                        return -1;
-                    else{
-                        if(s1[2].charAt(0) == s2[2].charAt(0))
-                        {
-                            String hm1[] = s1[1].split(":",0);
-                            String hm2[] = s2[1].split(":",0);
-                            int h1 = Integer.parseInt(hm1[0]);
-                            int h2 = Integer.parseInt(hm2[0]);
-                            int m1 = Integer.parseInt(hm1[1]);
-                            int m2 = Integer.parseInt(hm2[1]);
-                            if(h1 < h2)
-                                return 1;
-                            else if(h1 > h2)
-                                return -1;
-                            else
-                            {
-                                if(m1 < m2)
-                                    return 1;
-                                else
-                                    return -1;
-                            }
-                        }
-                        else if(s1[2].charAt(0)=='a')
-                            return 1;
-                        else
-                            return -1;
-                    }
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm aa", Locale.getDefault());
+                long t1 = 0, t2 = 0;
+                Date mDate1 = null, mDate2 = null;
+                try {
+                    mDate1 = sdf.parse(d1);
+                    mDate2 = sdf.parse(d2);
+                    t1 = mDate1.getTime();
+                    t2 = mDate2.getTime();
+                } catch (ParseException e) {
+                    e.printStackTrace();
                 }
+                if (t1 < t2)
+                    return -1;
+                else if (t1 > t2)
+                    return 1;
+                else
+                    return 0;
             }
         });
     }
 
-    void fixtureFetch(List<Fixture>fixtureList) {
+    void fixtureFetch(List<Fixture> fixtureList) {
         dbRef = FirebaseDatabase.getInstance().getReference("Fixtures");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 fixtureList.clear();
-                for(DataSnapshot ds : dataSnapshot.getChildren())
-                {
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     Fixture fixture = ds.getValue(Fixture.class);
-                    if(fixture.isLive() && !fixture.isCompleted()) {
-                        fixtureList.add(0,fixture);
+                    if (fixture.isLive() && !fixture.isCompleted()) {
+                        fixtureList.add(0, fixture);
                     }
                 }
                 sort(fixtureList);
