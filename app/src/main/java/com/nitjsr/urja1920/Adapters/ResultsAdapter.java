@@ -35,15 +35,68 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Fixture fixture = fixtureList.get(i);
         viewHolder.matchName.setText(fixture.getmatchName(fixture.getType()-1));
-        viewHolder.teamNames.setText(fixture.getTeam1().toUpperCase()+" vs "+fixture.getTeam2().toUpperCase());
+        if(fixture.getType()==9) {
+            viewHolder.teamNames.setText(fixture.getTeam1().toUpperCase());
+        }
+        else {
+            viewHolder.teamNames.setText(fixture.getTeam1().toUpperCase() + " vs " + fixture.getTeam2().toUpperCase());
+        }
         viewHolder.result.setText(fixture.getResult());
         viewHolder.roundName.setText(fixture.getRoundName());
-        viewHolder.matchScores.setVisibility(View.VISIBLE);
-        viewHolder.matchset1.setVisibility(View.GONE);
-        viewHolder.matchset2.setVisibility(View.GONE);
-        viewHolder.matchset3.setVisibility(View.GONE);
-        viewHolder.matchset4.setVisibility(View.GONE);
-        viewHolder.matchset5.setVisibility(View.GONE);
+        if(fixture.getScore1().equals("")|| fixture.getScore2().equals(""))
+        {
+            viewHolder.matchScores.setVisibility(View.INVISIBLE);
+        }
+        else
+        {
+            viewHolder.score1.setText(fixture.getScore1());
+            viewHolder.score2.setText(fixture.getScore2());
+        }
+        if(fixture.getS11().equals("") || fixture.getS12().equals(""))
+        {
+            viewHolder.matchset1.setVisibility(View.GONE);
+        }
+        else
+        {
+            viewHolder.s11.setText(fixture.getS11());
+            viewHolder.s12.setText(fixture.getS12());
+        }
+        if(fixture.getS21().equals("") || fixture.getS22().equals(""))
+        {
+            viewHolder.matchset2.setVisibility(View.GONE);
+        }
+        else
+        {
+            viewHolder.s21.setText(fixture.getS21());
+            viewHolder.s22.setText(fixture.getS22());
+        }
+        if(fixture.getS31().equals("") || fixture.getS32().equals(""))
+        {
+            viewHolder.matchset3.setVisibility(View.GONE);
+        }
+        else
+        {
+            viewHolder.s31.setText(fixture.getS31());
+            viewHolder.s32.setText(fixture.getS32());
+        }
+        if(fixture.getS41().equals("") || fixture.getS42().equals(""))
+        {
+            viewHolder.matchset4.setVisibility(View.GONE);
+        }
+        else
+        {
+            viewHolder.s41.setText(fixture.getS41());
+            viewHolder.s42.setText(fixture.getS42());
+        }
+        if(fixture.getS51().equals("") || fixture.getS52().equals(""))
+        {
+            viewHolder.matchset5.setVisibility(View.GONE);
+        }
+        else
+        {
+            viewHolder.s51.setText(fixture.getS51());
+            viewHolder.s52.setText(fixture.getS52());
+        }
     }
 
     @Override
@@ -63,7 +116,7 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ViewHold
         public TextView result;
         public TextView roundName;
         public LinearLayout matchScores, matchset1,matchset2,matchset3,matchset4,matchset5;
-        public TextView s11,s12,s21,s22,s31,s32,s41,s42,s51,s52;
+        public TextView s11,s12,s21,s22,s31,s32,s41,s42,s51,s52,score1,score2;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -77,6 +130,8 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ViewHold
             matchset3 = itemView.findViewById(R.id.match_sets3);
             matchset4 = itemView.findViewById(R.id.match_sets4);
             matchset5 = itemView.findViewById(R.id.match_sets5);
+            score1 = itemView.findViewById(R.id.match_score_1);
+            score2 = itemView.findViewById(R.id.match_score_2);
             s11 = itemView.findViewById(R.id.match_sets_11);
             s12 = itemView.findViewById(R.id.match_sets_12);
             s21 = itemView.findViewById(R.id.match_sets_21);

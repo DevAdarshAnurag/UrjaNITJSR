@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.nitjsr.urja1920.Adapters.MatchesAdapter;
 import com.nitjsr.urja1920.Adapters.UpcomingAdapter;
 import com.nitjsr.urja1920.Models.Fixture;
 import com.nitjsr.urja1920.R;
@@ -35,7 +36,7 @@ import java.util.Locale;
 public class MatchesFragment extends Fragment {
 
     RecyclerView rvMatchesLive;
-    UpcomingAdapter adapter;
+    MatchesAdapter adapter;
     private DatabaseReference dbRef;
 
     public MatchesFragment() {
@@ -56,7 +57,7 @@ public class MatchesFragment extends Fragment {
         List<Fixture> fixtureList = new ArrayList<>();
 
         rvMatchesLive.setLayoutManager(new LinearLayoutManager(getContext()));
-        adapter = new UpcomingAdapter(getContext(), fixtureList);
+        adapter = new MatchesAdapter(getContext(), fixtureList);
         rvMatchesLive.setAdapter(adapter);
         fixtureFetch(fixtureList);
     }
