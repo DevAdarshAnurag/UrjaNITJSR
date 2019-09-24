@@ -8,6 +8,8 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.nitjsr.urja1920.R;
 
@@ -16,6 +18,7 @@ import com.nitjsr.urja1920.R;
  */
 public class AboutUsFragment extends Fragment {
 
+    CardView civ_dev, civ_team, civ_abs;
 
     public AboutUsFragment() {
         // Required empty public constructor
@@ -34,10 +37,18 @@ public class AboutUsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         super.onActivityCreated(savedInstanceState);
 
-        CardView civ_dev, civ_team, civ_abs;
+
         civ_dev = view.findViewById(R.id.cv1);
         civ_team = view.findViewById(R.id.cv2);
         civ_abs = view.findViewById(R.id.cv3);
+        applyAnimation();
+    }
+
+    private void applyAnimation() {
+        Animation animZoomOut = AnimationUtils.loadAnimation(getContext(),R.anim.zoom_out);
+        civ_abs.startAnimation(animZoomOut);
+        civ_dev.startAnimation(animZoomOut);
+        civ_team.startAnimation(animZoomOut);
     }
 
 }
