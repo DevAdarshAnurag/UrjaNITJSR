@@ -9,8 +9,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SponsorsActivity extends AppCompatActivity {
 
-    CircleImageView circularImageView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

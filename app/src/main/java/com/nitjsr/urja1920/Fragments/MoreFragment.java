@@ -5,29 +5,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
 import com.nitjsr.urja1920.Activities.MapActivity;
 import com.nitjsr.urja1920.Activities.NotificationSettingsActivity;
 import com.nitjsr.urja1920.Activities.SponsorsActivity;
-import com.nitjsr.urja1920.Adapters.MoreListViewAdapter;
-import com.nitjsr.urja1920.Models.MoreItem;
 import com.nitjsr.urja1920.R;
 import com.nitjsr.urja1920.WhatsApp.EntryActivity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MoreFragment extends Fragment {
+public class MoreFragment extends Fragment implements View.OnClickListener {
 
-    ListView listView;
+    CardView cv1, cv2, cv3, cv4, cv5, cv6;
 
     public MoreFragment() {
         // Required empty public constructor
@@ -43,44 +37,38 @@ public class MoreFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        List<MoreItem> moreItems = new ArrayList<>();
-        moreItems.add(new MoreItem("Notifications", R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Sponsors", R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Stickers", R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Maps", R.mipmap.ic_launcher_round));
-        moreItems.add(new MoreItem("Share", R.mipmap.ic_launcher_round));
-        moreItems.add(new MoreItem("Rate us", R.mipmap.ic_launcher_round));
-        moreItems.add(new MoreItem("Website", R.mipmap.ic_launcher));
-        moreItems.add(new MoreItem("Gallery", R.mipmap.ic_launcher_round));
-        listView = view.findViewById(R.id.more_list_view);
-        listView.setAdapter(new MoreListViewAdapter(moreItems, getContext()));
+        cv1 = view.findViewById(R.id.sponsors);
+        cv2 = view.findViewById(R.id.notify);
+        cv3 = view.findViewById(R.id.maps);
+        cv4 = view.findViewById(R.id.stickers);
+        cv5 = view.findViewById(R.id.rate);
+        cv6 = view.findViewById(R.id.share);
+        cv1.setOnClickListener(this);
+        cv2.setOnClickListener(this);
+        cv3.setOnClickListener(this);
+        cv4.setOnClickListener(this);
+        cv5.setOnClickListener(this);
+        cv6.setOnClickListener(this);
+    }
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {//notifications
-                    Intent intent = new Intent(getActivity(), NotificationSettingsActivity.class);
-                    startActivity(intent);
-                } else if (position == 1) {//sponsors
-                    Intent intent = new Intent(getActivity(), SponsorsActivity.class);
-                    startActivity(intent);
-                } else if (position == 2) {//stickers
-                    Intent intent = new Intent(getActivity(), EntryActivity.class);
-                    startActivity(intent);
-                } else if (position == 3) {//maps
-                    Intent intent = new Intent(getActivity(), MapActivity.class);
-                    startActivity(intent);
-                } else if (position == 4) {//share
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.sponsors) {
+            Intent intent = new Intent(getActivity(), SponsorsActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.notify) {
+            Intent intent = new Intent(getActivity(), NotificationSettingsActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.maps) {
+            Intent intent = new Intent(getActivity(), MapActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.stickers) {
+            Intent intent = new Intent(getActivity(), EntryActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.share) {
 
-                } else if (position == 5) {//rate us
+        } else if (v.getId() == R.id.rate) {
 
-                } else if (position == 6) {//website
-
-                } else if (position == 7) {//gallery
-
-                }
-            }
-        });
-
+        }
     }
 }

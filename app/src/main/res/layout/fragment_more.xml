@@ -1,18 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:columnCount="2"
+    android:padding="8dp"
+    android:rowCount="3"
     tools:context=".Fragments.MoreFragment">
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/sponsors"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"></android.support.v7.widget.CardView>
 
-    <ListView
-        android:id="@+id/more_list_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fadeScrollbars="true"
-        android:nestedScrollingEnabled="true"
-        >
-    </ListView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/notify"
+        android:layout_row="0"
+        android:layout_rowWeight="1"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"></android.support.v7.widget.CardView>
 
-</FrameLayout>
+    <android.support.v7.widget.CardView
+        android:id="@+id/maps"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"></android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/stickers"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"></android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/rate"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:layout_column="0"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"></android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/share"
+        android:layout_row="2"
+        android:layout_rowWeight="1"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        app:cardElevation="4dp"></android.support.v7.widget.CardView>
+
+</GridLayout>
