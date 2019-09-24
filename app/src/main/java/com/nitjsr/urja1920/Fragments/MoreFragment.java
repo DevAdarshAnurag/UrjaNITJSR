@@ -9,6 +9,8 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.nitjsr.urja1920.Activities.MapActivity;
 import com.nitjsr.urja1920.Activities.NotificationSettingsActivity;
@@ -49,6 +51,7 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         cv4.setOnClickListener(this);
         cv5.setOnClickListener(this);
         cv6.setOnClickListener(this);
+        applyAnimation();
     }
 
     @Override
@@ -70,5 +73,15 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         } else if (v.getId() == R.id.rate) {
 
         }
+    }
+
+    private void applyAnimation() {
+        Animation animZoomOut = AnimationUtils.loadAnimation(getContext(), R.anim.zoom_out);
+        cv1.setAnimation(animZoomOut);
+        cv2.setAnimation(animZoomOut);
+        cv3.setAnimation(animZoomOut);
+        cv4.setAnimation(animZoomOut);
+        cv5.setAnimation(animZoomOut);
+        cv6.setAnimation(animZoomOut);
     }
 }
