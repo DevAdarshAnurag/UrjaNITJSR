@@ -29,30 +29,44 @@ public class HomeActivity extends AppCompatActivity {
     boolean exit = false;
     private DatabaseReference dbRef;
     private String ready = "";
+    private int fid = R.id.navigation_live;
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment = null;
+            int fid2 = -1;
             switch (item.getItemId()) {
                 case R.id.navigation_events:
                     fragment = new EventsFragment();
+                    fid2 = R.id.navigation_events;
                     break;
                 case R.id.navigation_leaderboard:
                     fragment = new LeaderboardFragment();
+                    fid2 = R.id.navigation_leaderboard;
                     break;
                 case R.id.navigation_live:
                     fragment = new LiveFragment();
+                    fid2 = R.id.navigation_live;
                     break;
                 case R.id.navigation_about_us:
                     fragment = new AboutUsFragment();
+                    fid2 = R.id.navigation_about_us;
                     break;
                 case R.id.navigation_more:
                     fragment = new MoreFragment();
+                    fid2 = R.id.navigation_more;
                     break;
             }
-            return loadFragment(fragment);
+            if(fid!=fid2) {
+                fid = fid2;
+                return loadFragment(fragment);
+            }
+            else {
+                return true;
+            }
         }
     };
 
