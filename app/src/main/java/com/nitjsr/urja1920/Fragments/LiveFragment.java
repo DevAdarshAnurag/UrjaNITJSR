@@ -35,7 +35,7 @@ public class LiveFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
-        String tabNames[]={"MATCHES","RESULTS","UPCOMING"};
+        String tabNames[]={"ONGOING","RESULTS","UPCOMING"};
         tabLayout = view.findViewById(R.id.menu_tabs);
         viewPager = view.findViewById(R.id.tab_viewpager);
         TabPagerAdapter tabPagerAdapter = new TabPagerAdapter(getChildFragmentManager());

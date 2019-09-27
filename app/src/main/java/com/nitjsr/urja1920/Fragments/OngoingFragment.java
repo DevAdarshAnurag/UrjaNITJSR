@@ -33,13 +33,13 @@ import java.util.Locale;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MatchesFragment extends Fragment {
+public class OngoingFragment extends Fragment {
 
     RecyclerView rvMatchesLive;
     MatchesAdapter adapter;
     private DatabaseReference dbRef;
 
-    public MatchesFragment() {
+    public OngoingFragment() {
         // Required empty public constructor
     }
 
