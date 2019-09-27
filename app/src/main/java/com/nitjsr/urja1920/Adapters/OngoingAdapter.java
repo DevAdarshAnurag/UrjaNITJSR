@@ -14,19 +14,19 @@ import com.nitjsr.urja1920.R;
 
 import java.util.List;
 
-public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHolder> {
+public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHolder> {
 
     Context context;
     List<Fixture> fixtureList;
 
-    public MatchesAdapter(Context context, List<Fixture> fixtureList) {
+    public OngoingAdapter(Context context, List<Fixture> fixtureList) {
         this.context = context;
         this.fixtureList = fixtureList;
     }
 
     @NonNull
     @Override
-    public MatchesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public OngoingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(context).inflate(R.layout.match_list_item, viewGroup, false);
         return new ViewHolder(itemView);
     }
