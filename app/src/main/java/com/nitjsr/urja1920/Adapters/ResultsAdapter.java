@@ -43,57 +43,63 @@ public class ResultsAdapter extends RecyclerView.Adapter<ResultsAdapter.ViewHold
         }
         viewHolder.result.setText(fixture.getResult());
         viewHolder.roundName.setText(fixture.getRoundName());
-        if(fixture.getScore1().equals("")|| fixture.getScore2().equals(""))
+        if(fixture.getScore1().equals("")&& fixture.getScore2().equals(""))
         {
             viewHolder.matchScores.setVisibility(View.INVISIBLE);
         }
         else
         {
+            viewHolder.matchScores.setVisibility(View.VISIBLE);
             viewHolder.score1.setText(fixture.getScore1());
             viewHolder.score2.setText(fixture.getScore2());
         }
-        if(fixture.getS11().equals("") || fixture.getS12().equals(""))
+        if(fixture.getS11().equals("") && fixture.getS12().equals(""))
         {
             viewHolder.matchset1.setVisibility(View.GONE);
         }
         else
         {
+            viewHolder.matchset1.setVisibility(View.VISIBLE);
             viewHolder.s11.setText(fixture.getS11());
             viewHolder.s12.setText(fixture.getS12());
         }
-        if(fixture.getS21().equals("") || fixture.getS22().equals(""))
+        if(fixture.getS21().equals("") && fixture.getS22().equals(""))
         {
             viewHolder.matchset2.setVisibility(View.GONE);
         }
         else
         {
+            viewHolder.matchset2.setVisibility(View.VISIBLE);
             viewHolder.s21.setText(fixture.getS21());
             viewHolder.s22.setText(fixture.getS22());
         }
-        if(fixture.getS31().equals("") || fixture.getS32().equals(""))
+        if(fixture.getS31().equals("") && fixture.getS32().equals(""))
         {
             viewHolder.matchset3.setVisibility(View.GONE);
         }
         else
         {
+            viewHolder.matchset3.setVisibility(View.VISIBLE);
             viewHolder.s31.setText(fixture.getS31());
             viewHolder.s32.setText(fixture.getS32());
         }
-        if(fixture.getS41().equals("") || fixture.getS42().equals(""))
+        if(fixture.getS41().equals("") && fixture.getS42().equals(""))
         {
             viewHolder.matchset4.setVisibility(View.GONE);
         }
         else
         {
+            viewHolder.matchset4.setVisibility(View.VISIBLE);
             viewHolder.s41.setText(fixture.getS41());
             viewHolder.s42.setText(fixture.getS42());
         }
-        if(fixture.getS51().equals("") || fixture.getS52().equals(""))
+        if(fixture.getS51().equals("") && fixture.getS52().equals(""))
         {
             viewHolder.matchset5.setVisibility(View.GONE);
         }
         else
         {
+            viewHolder.matchset5.setVisibility(View.VISIBLE);
             viewHolder.s51.setText(fixture.getS51());
             viewHolder.s52.setText(fixture.getS52());
         }
