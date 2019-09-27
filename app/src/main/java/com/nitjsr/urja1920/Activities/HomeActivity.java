@@ -123,6 +123,11 @@ public class HomeActivity extends AppCompatActivity {
                             System.exit(0);
                         }
                     });
+                    try {//do not remove try catch block
+                        builder.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 } else if(ready.equalsIgnoreCase("maintenance")){
                     builder.setTitle("Server Under Maintenance");
                     builder.setMessage("Please try later");
@@ -135,11 +140,11 @@ public class HomeActivity extends AppCompatActivity {
                             System.exit(0);
                         }
                     });
-                }
-                try {//do not remove try catch block
-                    builder.show();
-                } catch (Exception e) {
-                    e.printStackTrace();
+                    try {//do not remove try catch block
+                        builder.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 
