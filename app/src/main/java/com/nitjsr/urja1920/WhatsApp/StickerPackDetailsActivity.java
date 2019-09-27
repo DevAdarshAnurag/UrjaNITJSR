@@ -79,7 +79,7 @@ public class StickerPackDetailsActivity extends AddStickerPackActivity {
         if (getSupportActionBar() != null) {
             //getSupportActionBar().setDisplayHomeAsUpEnabled(showUpButton);
             //getSupportActionBar().setTitle(showUpButton ? R.string.title_activity_sticker_pack_details_multiple_pack : R.string.title_activity_sticker_pack_details_single_pack);
-            getSupportActionBar().setTitle("Urja");
+            getSupportActionBar().setTitle("Urja '20");
             getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         }
     }

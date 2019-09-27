@@ -1,14 +1,12 @@
 <resources>
-    <string name="app_name">Urja NIT-JSR</string>
-    <string name="title_activity_home">Urja</string>
+    <string name="app_name">Urja \'20</string>
+    <string name="title_activity_home">Urja \'20</string>
     <string name="title_events">Events</string>
     <string name="title_leaderboard">Leaderboard</string>
     <string name="title_about_us">About Us</string>
     <string name="title_live">Live</string>
     <string name="title_more">More</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--whatsapp-->
     <!-- Content description for the sticker pack tray image -->
