@@ -31,6 +31,7 @@
             android:layout_centerHorizontal="true"
             android:hint="Team1 vs Team2"
             android:paddingTop="16dp"
+            android:textColor="@color/colorPrimary"
             android:paddingBottom="4dp"
             android:textAlignment="center"
             android:textSize="16sp" />
@@ -47,9 +48,10 @@
                 android:id="@+id/match_score_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="124dp"
+                android:minWidth="150dp"
                 android:paddingRight="8dp"
                 android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -57,8 +59,9 @@
                 android:id="@+id/match_score_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="124dp"
+                android:minWidth="150dp"
                 android:paddingLeft="8dp"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
                 android:textSize="28sp"
                 android:textStyle="bold" />
@@ -79,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
                 android:paddingRight="8dp"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
                 android:textSize="16sp" />
 
@@ -87,6 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
+                android:textColor="@color/colorPrimary"
                 android:paddingLeft="8dp"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -105,6 +110,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
+                android:textColor="@color/colorPrimary"
                 android:paddingRight="8dp"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -115,6 +121,7 @@
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
                 android:paddingLeft="8dp"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -132,6 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
+                android:textColor="@color/colorPrimary"
                 android:paddingRight="8dp"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -141,6 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
+                android:textColor="@color/colorPrimary"
                 android:paddingLeft="8dp"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -159,6 +168,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
+                android:textColor="@color/colorPrimary"
                 android:paddingRight="8dp"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -169,6 +179,7 @@
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
                 android:paddingLeft="8dp"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -186,6 +197,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
+                android:textColor="@color/colorPrimary"
                 android:paddingRight="8dp"
                 android:textAlignment="center"
                 android:textSize="16sp" />
@@ -196,6 +208,7 @@
                 android:layout_height="wrap_content"
                 android:minWidth="124dp"
                 android:paddingLeft="8dp"
+                android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -207,6 +220,7 @@
             android:layout_below="@id/match_sets5"
             android:layout_alignParentStart="true"
             android:hint="roundName"
+            android:textColor="@color/colorPrimary"
             android:padding="4dp"
             android:textSize="16sp" />
 
@@ -217,6 +231,7 @@
             android:layout_below="@id/match_sets5"
             android:layout_alignParentEnd="true"
             android:hint="result"
+            android:textColor="@color/colorPrimary"
             android:padding="4dp"
             android:textAlignment="textEnd"
             android:textSize="16sp" />
