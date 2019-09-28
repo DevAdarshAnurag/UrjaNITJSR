@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ResultsFragment">
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_results"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,9 +17,9 @@
         app:tabRippleColor="@color/colorPrimaryDark"
         app:tabSelectedTextColor="#fff"
         app:tabTextColor="@color/colorPrimaryDark">
-    </android.support.design.widget.TabLayout>
+    </com.google.android.material.tabs.TabLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@id/tab_results"
         android:id="@+id/rv_results"
         android:layout_width="match_parent"

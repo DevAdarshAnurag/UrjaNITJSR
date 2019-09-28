@@ -1,7 +1,7 @@
 package com.nitjsr.urja1920.Utilities;
 
 import android.content.Context;
-import android.support.v7.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 public class EventLayoutManager extends LinearLayoutManager {
     private boolean isScrollEnabled = true;

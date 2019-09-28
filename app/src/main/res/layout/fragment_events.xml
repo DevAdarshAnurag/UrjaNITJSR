@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.EventsFragment">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/event_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
-    <android.support.design.widget.CoordinatorLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coord"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,19 +21,19 @@
         android:background="#66000000"
         android:visibility="gone">
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/bottom_sheet"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:behavior_hideable="true"
             app:elevation="4dp"
-            app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/event"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -63,9 +63,9 @@
                             android:orientation="horizontal" />
                     </RelativeLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/rules"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -102,11 +102,11 @@
                             android:hint="Upcoming ..."
                             android:textSize="16sp" />
                     </RelativeLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
-    </android.support.design.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </RelativeLayout>

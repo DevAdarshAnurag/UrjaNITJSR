@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.UpcomingFragment">
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_upcomings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,14 +17,14 @@
         app:tabRippleColor="@color/colorPrimaryDark"
         app:tabSelectedTextColor="#fff"
         app:tabTextColor="@color/colorPrimaryDark">
-    </android.support.design.widget.TabLayout>
+    </com.google.android.material.tabs.TabLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@id/tab_upcomings"
         android:id="@+id/rv_upcomings"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>
