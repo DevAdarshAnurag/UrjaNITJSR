@@ -18,6 +18,7 @@ import com.nitjsr.urja1920.Adapters.EventAdapter;
 import com.nitjsr.urja1920.R;
 import com.nitjsr.urja1920.Models.Events;
 import com.nitjsr.urja1920.Utilities.EventLayoutManager;
+import com.nitjsr.urja1920.Utilities.Rules;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +34,7 @@ public class EventsFragment extends Fragment implements EventAdapter.onItemClick
     private EventLayoutManager eventLayoutManager;
     private BottomSheetBehavior behavior;
     private CoordinatorLayout coordinatorLayout;
-    private TextView tvEventName;
+    private TextView tvEventName, tvEventRules;
 
     public EventsFragment() {
         // Required empty public constructor
@@ -52,6 +53,7 @@ public class EventsFragment extends Fragment implements EventAdapter.onItemClick
 
         NestedScrollView bottomsheet = view.findViewById(R.id.bottom_sheet);
         tvEventName = view.findViewById(R.id.event_name_);
+        tvEventRules = view.findViewById(R.id.event_rules);
         coordinatorLayout = view.findViewById(R.id.coord);
         behavior = BottomSheetBehavior.from(bottomsheet);
         behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
@@ -103,8 +105,9 @@ public class EventsFragment extends Fragment implements EventAdapter.onItemClick
     public void onItemClick(int position) {
 
         coordinatorLayout.setVisibility(View.VISIBLE);
-        behavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED);
-        tvEventName.setText("Urja");
+        behavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+        tvEventName.setText(Rules.getEventName(position));
+        tvEventRules.setText(Rules.getRules(position));
         eventLayoutManager.setScrollEnabled(false);
     }
 }
