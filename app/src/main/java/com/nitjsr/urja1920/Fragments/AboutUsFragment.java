@@ -41,9 +41,9 @@ public class AboutUsFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
 
-        civ_dev = view.findViewById(R.id.cv1);
+        civ_dev = view.findViewById(R.id.cv3);
         civ_team = view.findViewById(R.id.cv2);
-        civ_abs = view.findViewById(R.id.cv3);
+        civ_abs = view.findViewById(R.id.cv1);
         civ_team.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
