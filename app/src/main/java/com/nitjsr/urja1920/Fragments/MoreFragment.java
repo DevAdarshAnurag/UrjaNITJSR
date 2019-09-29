@@ -7,6 +7,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.cardview.widget.CardView;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +47,7 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         cv3 = view.findViewById(R.id.maps);
         cv4 = view.findViewById(R.id.stickers);
         cv5 = view.findViewById(R.id.rate);
-        cv6 = view.findViewById(R.id.share);
+        cv6 = view.findViewById(R.id.facebook);
         cv1.setOnClickListener(this);
         cv2.setOnClickListener(this);
         cv3.setOnClickListener(this);
@@ -69,12 +71,22 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         } else if (v.getId() == R.id.stickers) {
             Intent intent = new Intent(getActivity(), EntryActivity.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.share) {
+        } else if (v.getId() == R.id.facebook) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/urjanitjsr"));
+            startActivity(Intent.createChooser(intent,"Join us on Facebook."));
 
         } else if (v.getId() == R.id.rate) {
-            Uri uri = Uri.parse("market://details?id="+getContext().getPackageName());
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            startActivity(Intent.createChooser(intent,"Rate us..."));
+            Uri uri = Uri.parse("market://details?id=" + getContext().getPackageName());
+            Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+            goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                    Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                    Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+            try {
+                startActivity(goToMarket);
+            } catch (Exception e) {
+                startActivity(new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("http://play.google.com/store/apps/details?id=" + getContext().getPackageName())));
+            }
         }
     }
 
