@@ -2,6 +2,7 @@ package com.nitjsr.urja1920.Fragments;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -71,7 +72,9 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         } else if (v.getId() == R.id.share) {
 
         } else if (v.getId() == R.id.rate) {
-
+            Uri uri = Uri.parse("market://details?id="+getContext().getPackageName());
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(Intent.createChooser(intent,"Rate us..."));
         }
     }
 
