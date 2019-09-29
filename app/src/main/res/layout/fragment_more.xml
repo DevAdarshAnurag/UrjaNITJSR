@@ -17,7 +17,14 @@
         android:layout_column="0"
         android:layout_columnWeight="1"
         android:layout_margin="8dp"
-        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_sponsors" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/notify"
@@ -26,7 +33,14 @@
         android:layout_column="1"
         android:layout_columnWeight="1"
         android:layout_margin="8dp"
-        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_notifications" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/maps"
@@ -35,7 +49,14 @@
         android:layout_column="0"
         android:layout_columnWeight="1"
         android:layout_margin="8dp"
-        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_maps" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/stickers"
@@ -44,7 +65,14 @@
         android:layout_column="1"
         android:layout_columnWeight="1"
         android:layout_margin="8dp"
-        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_stickers" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/rate"
@@ -62,6 +90,13 @@
         android:layout_column="1"
         android:layout_columnWeight="1"
         android:layout_margin="8dp"
-        app:cardElevation="4dp"></androidx.cardview.widget.CardView>
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_rate" />
+    </androidx.cardview.widget.CardView>
 
 </GridLayout>
