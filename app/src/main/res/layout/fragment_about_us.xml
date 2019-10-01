@@ -29,6 +29,11 @@
         android:layout_centerInParent="true"
         android:layout_marginEnd="8dp"
         android:layout_toStartOf="@id/abs_ll1">
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:src="@drawable/splash_urja"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -41,6 +46,11 @@
         android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/abs_ll1"
         android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_team"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -52,6 +62,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:background="@color/colorPrimary">
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_developer"/>
 
     </androidx.cardview.widget.CardView>
 
