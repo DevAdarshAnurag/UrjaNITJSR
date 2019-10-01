@@ -34,7 +34,7 @@ public class EventsFragment extends Fragment implements EventAdapter.onItemClick
     private EventLayoutManager eventLayoutManager;
     private BottomSheetBehavior behavior;
     private CoordinatorLayout coordinatorLayout;
-    private TextView tvEventName, tvEventRules;
+    private TextView tvEventName, tvEventRules, tvCross;
 
     public EventsFragment() {
         // Required empty public constructor
@@ -54,6 +54,7 @@ public class EventsFragment extends Fragment implements EventAdapter.onItemClick
         NestedScrollView bottomsheet = view.findViewById(R.id.bottom_sheet);
         tvEventName = view.findViewById(R.id.event_name_);
         tvEventRules = view.findViewById(R.id.event_rules);
+        tvCross = view.findViewById(R.id.tv_cross);
         coordinatorLayout = view.findViewById(R.id.coord);
         behavior = BottomSheetBehavior.from(bottomsheet);
         behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
@@ -99,6 +100,13 @@ public class EventsFragment extends Fragment implements EventAdapter.onItemClick
         EventAdapter eventAdapter = new EventAdapter(getContext(),list);
         eventRecyclerView.setAdapter(eventAdapter);
         eventAdapter.setOnClick(EventsFragment.this);
+
+        tvCross.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                behavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+            }
+        });
     }
 
     @Override
