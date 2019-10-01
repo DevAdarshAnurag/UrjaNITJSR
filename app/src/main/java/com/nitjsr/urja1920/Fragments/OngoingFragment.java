@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -37,6 +38,7 @@ public class OngoingFragment extends Fragment {
     RecyclerView rvMatchesLive;
     OngoingAdapter adapter;
     private DatabaseReference dbRef;
+    TextView textView;
 
     public OngoingFragment() {
         // Required empty public constructor
@@ -54,7 +56,7 @@ public class OngoingFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         rvMatchesLive = view.findViewById(R.id.rv_matxhes_live);
         List<Fixture> fixtureList = new ArrayList<>();
-
+        textView = view.findViewById(R.id.tv_ongoing);
         rvMatchesLive.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new OngoingAdapter(getContext(), fixtureList);
         rvMatchesLive.setAdapter(adapter);
@@ -102,6 +104,10 @@ public class OngoingFragment extends Fragment {
                     }
                 }
                 sort(fixtureList);
+                if(fixtureList.isEmpty())
+                    textView.setVisibility(View.VISIBLE);
+                else
+                    textView.setVisibility(View.GONE);
                 adapter.notifyDataSetChanged();
             }
 

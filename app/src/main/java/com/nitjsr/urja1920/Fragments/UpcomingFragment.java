@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -43,6 +44,7 @@ public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItem
     List<Fixture> fixtureList = new ArrayList<>();
     private DatabaseReference dbRef;
     private int type = -1;
+    TextView textView;
 
     public UpcomingFragment() {
         // Required empty public constructor
@@ -64,6 +66,7 @@ public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItem
         for (int i = 0; i < 10; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(tabNames[i]));
         }
+        textView = view.findViewById(R.id.tv_upcoming);
         rvUpcoming = view.findViewById(R.id.rv_upcomings);
         rvUpcoming.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new UpcomingAdapter(getContext(), fixtureList);
@@ -110,6 +113,10 @@ public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItem
                     }
                 }
                 sort(fixtureList);
+                if(fixtureList.isEmpty())
+                    textView.setVisibility(View.VISIBLE);
+                else
+                    textView.setVisibility(View.GONE);
                 adapter.notifyDataSetChanged();
             }
 

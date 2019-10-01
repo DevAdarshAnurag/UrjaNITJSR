@@ -20,11 +20,21 @@
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@id/tab_upcomings"
         android:id="@+id/rv_upcomings"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_upcomings">
     </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_upcoming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_upcomings"
+        android:text="No upcoming fixtures..."
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:visibility="gone" />
 
 </RelativeLayout>
