@@ -131,7 +131,7 @@ public class HomeActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.dismiss();
                             Intent i = new Intent(Intent.ACTION_VIEW);
-                            i.setData(Uri.parse("https://www.google.com"));
+                            i.setData(Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName()));
                             startActivity(i);
                             System.gc();
                             System.exit(0);
