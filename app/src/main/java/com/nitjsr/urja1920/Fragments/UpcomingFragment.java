@@ -171,7 +171,7 @@ public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItem
         Intent intent = new Intent(Intent.ACTION_INSERT)
                 .setData(CalendarContract.Events.CONTENT_URI)
                 .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, timeInMilliseconds)
-                .putExtra(CalendarContract.Events.TITLE, fix.getmatchName(fix.getType()-1) + " " + fix.getRoundName())
+                .putExtra(CalendarContract.Events.TITLE, fix.getmatchName(fix.getType()-1) + " "+fix.getTeam1()+" "+fix.getTeam2()+" " + fix.getRoundName())
                 .putExtra(CalendarContract.Events.DESCRIPTION, "Urja 2020")
                 .putExtra(CalendarContract.Events.EVENT_LOCATION, "NIT Jamshedpur")
                 .putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY);

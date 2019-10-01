@@ -1,8 +1,6 @@
 package com.nitjsr.urja1920.Adapters;
 
 import android.content.Context;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +11,9 @@ import com.nitjsr.urja1920.Models.Fixture;
 import com.nitjsr.urja1920.R;
 
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHolder> {
 
@@ -35,13 +36,13 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         Fixture fixture = fixtureList.get(i);
-        viewHolder.matchName.setText(fixture.getmatchName(fixture.getType()-1));
-        if(fixture.getType()==9) {
+        viewHolder.matchName.setText(fixture.getmatchName(fixture.getType() - 1));
+        if (fixture.getType() == 9) {
             viewHolder.teamNames.setText(fixture.getTeam1().toUpperCase());
-        }
-        else {
+        } else {
             viewHolder.teamNames.setText(fixture.getTeam1().toUpperCase() + " vs " + fixture.getTeam2().toUpperCase());
         }
+        viewHolder.tvPlus.setVisibility(View.VISIBLE);
         viewHolder.result.setText(fixture.getDate());
         viewHolder.roundName.setText(fixture.getRoundName());
         viewHolder.matchScores.setVisibility(View.INVISIBLE);
@@ -50,7 +51,7 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHo
         viewHolder.matchset3.setVisibility(View.GONE);
         viewHolder.matchset4.setVisibility(View.GONE);
         viewHolder.matchset5.setVisibility(View.GONE);
-        viewHolder.matchName.setOnClickListener(new View.OnClickListener() {
+        viewHolder.tvPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onClick.onItemClick(i);
@@ -82,8 +83,9 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHo
         public TextView teamNames;
         public TextView result;
         public TextView roundName;
-        public LinearLayout matchScores, matchset1,matchset2,matchset3,matchset4,matchset5;
-        public TextView s11,s12,s21,s22,s31,s32,s41,s42,s51,s52;
+        public LinearLayout matchScores, matchset1, matchset2, matchset3, matchset4, matchset5;
+        public TextView s11, s12, s21, s22, s31, s32, s41, s42, s51, s52;
+        public TextView tvPlus;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -107,6 +109,7 @@ public class UpcomingAdapter extends RecyclerView.Adapter<UpcomingAdapter.ViewHo
             s42 = itemView.findViewById(R.id.match_sets_42);
             s51 = itemView.findViewById(R.id.match_sets_51);
             s52 = itemView.findViewById(R.id.match_sets_52);
+            tvPlus = itemView.findViewById(R.id.plus);
         }
     }
 }
