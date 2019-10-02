@@ -29,7 +29,7 @@ import java.util.List;
 public class EventsFragment extends Fragment implements EventAdapter.onItemClicked {
 
     int[] images = {R.drawable.athletics, R.drawable.cricket, R.drawable.badminton,R.drawable.volleyball,R.drawable.basketball,
-            R.drawable.hockey,R.drawable.chess,R.drawable.table_tennis,R.drawable.splash_urja};
+            R.drawable.hockey,R.drawable.chess,R.drawable.table_tennis,R.drawable.football};
     RecyclerView eventRecyclerView;
     private EventLayoutManager eventLayoutManager;
     private BottomSheetBehavior behavior;
