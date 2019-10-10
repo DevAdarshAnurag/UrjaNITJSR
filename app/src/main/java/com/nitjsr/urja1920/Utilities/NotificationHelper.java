@@ -21,7 +21,7 @@ public class NotificationHelper {
         SharedPreferences pref = context.getApplicationContext().getSharedPreferences("MyPref", 0);
         if (pref.getBoolean(title, true)) {
             NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, SplashActivity.CHANNEL_ID)
-                    .setSmallIcon(R.drawable.splash_urja)
+                    .setSmallIcon(R.drawable.ic_urja)
                     .setContentTitle(title)
                     .setContentText(body)
                     .setStyle(new NotificationCompat.BigTextStyle().bigText(body))

@@ -33,7 +33,7 @@
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
-            android:src="@drawable/splash_urja"/>
+            android:src="@drawable/ic_urja"/>
 
     </androidx.cardview.widget.CardView>
 
