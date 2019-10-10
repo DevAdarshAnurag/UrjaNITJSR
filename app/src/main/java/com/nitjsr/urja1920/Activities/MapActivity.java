@@ -1,6 +1,8 @@
 package com.nitjsr.urja1920.Activities;
 
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
@@ -9,6 +11,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
@@ -60,10 +64,15 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 .bearing(0)
                 .tilt(90)
                 .build();
+        int height = 100;
+        int width = 100;
+        Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.lion);
+        Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
+        BitmapDescriptor smallMarkerIcon = BitmapDescriptorFactory.fromBitmap(smallMarker);
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-        googleMap.addMarker(new MarkerOptions().position(hockeyGround).title("Hockey Ground"));
-        googleMap.addMarker(new MarkerOptions().position(tsg).title("TSG"));
-        googleMap.addMarker(new MarkerOptions().position(upsGround).title("Football Ground"));
+        googleMap.addMarker(new MarkerOptions().position(hockeyGround).title("Hockey Ground").icon(smallMarkerIcon));
+        googleMap.addMarker(new MarkerOptions().position(tsg).title("TSG").icon(smallMarkerIcon));
+        googleMap.addMarker(new MarkerOptions().position(upsGround).title("Football Ground").icon(smallMarkerIcon));
 
         googleMap.setBuildingsEnabled(true);
         googleMap.getUiSettings().setAllGesturesEnabled(true);

@@ -100,7 +100,7 @@
     "elementType": "labels.text",
     "stylers": [
       {
-        "visibility":"on"
+        "visibility":"off"
       }
     ]
   },
@@ -127,7 +127,7 @@
     "elementType": "labels.text",
     "stylers": [
       {
-        "visibility":"on"
+        "visibility":"off"
       }
     ]
   },
