@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.nitjsr.urja1920.Activities.AboutUsActivity;
 import com.nitjsr.urja1920.Activities.CoreTeamActivity;
 import com.nitjsr.urja1920.Activities.DevelopersActivity;
 import com.nitjsr.urja1920.R;
@@ -44,6 +45,12 @@ public class AboutUsFragment extends Fragment {
         civ_dev = view.findViewById(R.id.cv3);
         civ_team = view.findViewById(R.id.cv2);
         civ_abs = view.findViewById(R.id.cv1);
+        civ_abs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), AboutUsActivity.class));
+            }
+        });
         civ_team.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
