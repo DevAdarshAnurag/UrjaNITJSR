@@ -90,6 +90,13 @@
                         android:layout_height="wrap_content"
                         android:padding="16dp">
 
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/mascot_urja_app"
+                            android:scaleType="centerInside"
+                            android:alpha="0.15"/>
+
                         <TextView
                             android:id="@+id/rules_text"
                             android:layout_width="match_parent"
