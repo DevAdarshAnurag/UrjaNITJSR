@@ -49,7 +49,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
 
 
-        LatLng loc = new LatLng(22.775032, 86.143945);
+        LatLng loc = new LatLng(22.776921, 86.143166);
         LatLng hockeyGround = new LatLng(22.772673, 86.143152);
         LatLng tsg = new LatLng(22.775095, 86.143803);
         LatLng footballGround = new LatLng(22.780951, 86.143343);
