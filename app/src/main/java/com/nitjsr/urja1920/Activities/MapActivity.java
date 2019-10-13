@@ -51,21 +51,21 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         LatLng loc = new LatLng(22.775032, 86.143945);
         LatLng hockeyGround = new LatLng(22.772673, 86.143152);
-        LatLng tsg = new LatLng(22.775032, 86.143945);
-        LatLng upsGround = new LatLng(22.780951, 86.143343);
-//        LatLng hockeyGround = new LatLng();
-//        LatLng hockeyGround = new LatLng();
-//        LatLng hockeyGround = new LatLng();
-//        LatLng hockeyGround = new LatLng();
+        LatLng tsg = new LatLng(22.775095, 86.143803);
+        LatLng footballGround = new LatLng(22.780951, 86.143343);
+        LatLng cricketGround = new LatLng(22.774855, 86.142378);
+        LatLng athleticsGround = new LatLng(22.774835, 86.142912);
+        LatLng basketballCourt1 = new LatLng(22.773361, 86.143262);
+        LatLng volleyballCourt = new LatLng(22.7798674,86.1434411);
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(loc)      // Sets the center of the map to Mountain View
                 .zoom(17)                   // Sets the zoom
-                .bearing(0)
+                .bearing(-10)
                 .tilt(90)
                 .build();
         int height = 64;
-        int width = 48;
+        int width = 56;
 
         Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.mp_badminton);
         Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
@@ -106,7 +106,11 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         googleMap.addMarker(new MarkerOptions().position(hockeyGround).title("Hockey").icon(hockeyIcon));
         googleMap.addMarker(new MarkerOptions().position(tsg).title("Badminton").icon(badmintonIcon));
-        googleMap.addMarker(new MarkerOptions().position(upsGround).title("Football").icon(footballIcon));
+        googleMap.addMarker(new MarkerOptions().position(footballGround).title("Football").icon(footballIcon));
+        googleMap.addMarker(new MarkerOptions().position(cricketGround).title("Cricket").icon(cricketIcon));
+        googleMap.addMarker(new MarkerOptions().position(athleticsGround).title("Athletics").icon(athleticsIcon));
+        googleMap.addMarker(new MarkerOptions().position(basketballCourt1).title("Basketball").icon(basketballIcon));
+        googleMap.addMarker(new MarkerOptions().position(volleyballCourt).title("Volleyball").icon(volleyballIcon));
 
         googleMap.setBuildingsEnabled(true);
         googleMap.getUiSettings().setAllGesturesEnabled(true);
