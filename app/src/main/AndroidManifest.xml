@@ -18,21 +18,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.AboutUsActivity"></activity>
+        <activity android:name=".Activities.AboutUsActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activities.CoreTeamActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_home" />
         <activity
             android:name=".Activities.DevelopersActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_home" />
         <activity
             android:name=".Activities.SponsorsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_home" />
         <activity
             android:name=".Activities.NotificationSettingsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_home" />
         <activity
             android:name=".Activities.MapActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_home" />
 
         <uses-library
@@ -45,21 +51,26 @@
 
         <activity
             android:name=".Activities.HomeActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_home" />
-        <activity android:name=".Activities.SplashActivity">
+        <activity android:name=".Activities.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WhatsApp.EntryActivity" />
+        <activity android:name=".WhatsApp.EntryActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".WhatsApp.StickerPackListActivity"
-            android:label="@string/title_activity_sticker_packs_list" />
+            android:label="@string/title_activity_sticker_packs_list"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".WhatsApp.StickerPackDetailsActivity"
             android:parentActivityName=".WhatsApp.StickerPackListActivity"
+            android:screenOrientation="portrait"
             tools:ignore="UnusedAttribute">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -69,6 +80,7 @@
             android:name=".WhatsApp.StickerPackInfoActivity"
             android:label="@string/title_activity_sticker_pack_info"
             android:parentActivityName=".WhatsApp.StickerPackDetailsActivity"
+            android:screenOrientation="portrait"
             tools:ignore="UnusedAttribute">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
