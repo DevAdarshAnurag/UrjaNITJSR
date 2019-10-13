@@ -56,6 +56,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         LatLng cricketGround = new LatLng(22.774855, 86.142378);
         LatLng athleticsGround = new LatLng(22.774835, 86.142912);
         LatLng basketballCourt1 = new LatLng(22.773361, 86.143262);
+        LatLng basketballCourt2 = new LatLng(22.779609, 86.143312);
+        LatLng tt = new LatLng(22.774890, 86.143795);
+        LatLng chess = new LatLng(22.777324, 86.143913);
         LatLng volleyballCourt = new LatLng(22.7798674,86.1434411);
 
         CameraPosition cameraPosition = new CameraPosition.Builder()
@@ -111,6 +114,9 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         googleMap.addMarker(new MarkerOptions().position(athleticsGround).title("Athletics").icon(athleticsIcon));
         googleMap.addMarker(new MarkerOptions().position(basketballCourt1).title("Basketball").icon(basketballIcon));
         googleMap.addMarker(new MarkerOptions().position(volleyballCourt).title("Volleyball").icon(volleyballIcon));
+        googleMap.addMarker(new MarkerOptions().position(tt).title("Table Tennis").icon(tabletennisIcon));
+        googleMap.addMarker(new MarkerOptions().position(basketballCourt2).title("Basketball").icon(basketballIcon));
+        googleMap.addMarker(new MarkerOptions().position(chess).title("Chess").icon(chessIcon));
 
         googleMap.setBuildingsEnabled(true);
         googleMap.getUiSettings().setAllGesturesEnabled(true);
