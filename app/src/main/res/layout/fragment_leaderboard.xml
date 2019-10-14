@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.LeaderboardFragment">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.15"
+        android:src="@drawable/mascot_urja_app"
+        android:scaleType="centerInside"/>
+
     <LinearLayout
         android:id="@+id/leaderboard_head"
         android:layout_width="match_parent"
