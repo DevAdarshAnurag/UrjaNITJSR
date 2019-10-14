@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.AboutUsFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.15"
+        android:scaleType="centerInside"
+        android:src="@drawable/mascot_urja_app" />
 
     <LinearLayout
         android:id="@+id/abs_ll1"
@@ -28,12 +36,15 @@
         android:layout_above="@id/abs_ll2"
         android:layout_centerInParent="true"
         android:layout_marginEnd="8dp"
-        android:layout_toStartOf="@id/abs_ll1">
+        android:layout_toStartOf="@id/abs_ll1"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="2dp">
+
         <ImageView
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_urja"/>
+            android:src="@drawable/ic_urja" />
 
     </androidx.cardview.widget.CardView>
 
@@ -45,12 +56,14 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/abs_ll1"
-        android:background="@color/colorPrimary">
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="2dp">
+
         <ImageView
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_team"/>
+            android:src="@drawable/ic_team" />
 
     </androidx.cardview.widget.CardView>
 
@@ -61,12 +74,14 @@
         android:layout_below="@id/abs_ll2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
-        android:background="@color/colorPrimary">
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="2dp">
+
         <ImageView
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_developer"/>
+            android:src="@drawable/ic_developer" />
 
     </androidx.cardview.widget.CardView>
 
