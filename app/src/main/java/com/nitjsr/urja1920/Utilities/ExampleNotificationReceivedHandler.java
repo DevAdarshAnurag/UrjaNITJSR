@@ -1,14 +1,13 @@
 package com.nitjsr.urja1920.Utilities;
 
-import com.nitjsr.urja1920.WhatsApp.StickerApplication;
 import com.onesignal.OSNotification;
 import com.onesignal.OSNotificationPayload;
 import com.onesignal.OneSignal;
 
 public class ExampleNotificationReceivedHandler implements OneSignal.NotificationReceivedHandler {
-    private StickerApplication application;
+    private ApplicationClass application;
 
-    public ExampleNotificationReceivedHandler(StickerApplication stickerApplication) {
+    public ExampleNotificationReceivedHandler(ApplicationClass stickerApplication) {
         application = stickerApplication;
     }
 

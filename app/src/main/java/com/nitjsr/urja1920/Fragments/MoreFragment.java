@@ -4,11 +4,6 @@ package com.nitjsr.urja1920.Fragments;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.cardview.widget.CardView;
-
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +14,10 @@ import com.nitjsr.urja1920.Activities.MapActivity;
 import com.nitjsr.urja1920.Activities.NotificationSettingsActivity;
 import com.nitjsr.urja1920.Activities.SponsorsActivity;
 import com.nitjsr.urja1920.R;
-import com.nitjsr.urja1920.WhatsApp.EntryActivity;
+
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,12 +68,12 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
             startActivity(intent);
         } else if (v.getId() == R.id.instagram) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.instagram.com/urja_nitjsr"));
-            startActivity(Intent.createChooser(intent,"See us on Instagram."));
+            startActivity(Intent.createChooser(intent, "See us on Instagram."));
             //Intent intent = new Intent(getActivity(), EntryActivity.class);
             //startActivity(intent);
         } else if (v.getId() == R.id.facebook) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/urjanitjsr"));
-            startActivity(Intent.createChooser(intent,"Join us on Facebook."));
+            startActivity(Intent.createChooser(intent, "Join us on Facebook."));
 
         } else if (v.getId() == R.id.rate) {
             Uri uri = Uri.parse("market://details?id=" + getContext().getPackageName());

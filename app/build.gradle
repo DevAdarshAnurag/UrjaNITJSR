@@ -3,7 +3,7 @@ buildscript {
         maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
-        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.6'
     }
 }
 apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
@@ -27,18 +27,12 @@ android {
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
 
-        def contentProviderAuthority = applicationId + ".stickercontentprovider"
-
         // Creates a placeholder property to use in the manifest.
         manifestPlaceholders =
-                [contentProviderAuthority       : contentProviderAuthority,
-                 onesignal_app_id               : '1d55515c-9868-4007-a1f0-94054d52c6a4',
+                [onesignal_app_id               : '1d55515c-9868-4007-a1f0-94054d52c6a4',
                  onesignal_google_project_number: 'REMOTE']
 
-        // Adds a new field for the authority to the BuildConfig class.
-        buildConfigField("String",
-                "CONTENT_PROVIDER_AUTHORITY",
-                "\"${contentProviderAuthority}\"")
+
     }
     buildTypes {
         release {
@@ -50,54 +44,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    aaptOptions {
-        noCompress "webp"
-    }
+
 }
 
 
-task checkDebug {
-    doLast {
-        println("checkDebug")
-//        if (android.defaultConfig.applicationId.startsWith("com.whatsapp")) {
-//            throw new GradleException("applicationId in defaultConfig cannot start with com.whatsapp, please change your applicationId in app/build.gradle");
-//        }
-        checkApplicationIdInDebug()
-    }
-}
 
-private void checkApplicationIdInDebug() {
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-    def ignoreApplicationIdCheck = properties.getProperty('ignoreApplicationIdCheck')
-    if (ignoreApplicationIdCheck == null) {
-//        if (android.defaultConfig.applicationId.equals("com.bytebucket1111.stickerapp")) {
-//            throw new GradleException("Your applicationId is currently com.example.samplestickerapp, please change your applicationId to a different string in app/build.gradle in line 16");
-//        }
-    } else {
-        println("application id check ignored")
-    }
-}
-
-
-task checkRelease {
-    doLast {
-        println("checkRelease")
-//        if (android.defaultConfig.applicationId.startsWith("com.bytebucket1111")) {
-//            throw new GradleException("applicationId in defaultConfig cannot start with com.example, please change your applicationId in app/build.gradle");
-//        }
-    }
-}
-
-tasks.whenTaskAdded { task ->
-    println(task.name)
-    if (task.name.contains("assembleDebug")) {
-        task.dependsOn checkDebug
-    }
-    if (task.name.contains("assembleRelease")) {
-        task.dependsOn checkRelease
-    }
-}
 
 
 
@@ -112,11 +63,6 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
-
-
-    implementation 'com.facebook.fresco:fresco:1.12.0'
-    implementation 'com.facebook.fresco:webpsupport:1.12.0'
-    implementation 'com.facebook.fresco:animated-webp:1.12.0'
 
     implementation 'com.google.firebase:firebase-database:19.1.0'
 

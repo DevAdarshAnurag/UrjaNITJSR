@@ -6,22 +6,20 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-package com.nitjsr.urja1920.WhatsApp;
+package com.nitjsr.urja1920.Utilities;
 
 import android.app.Application;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
-import com.nitjsr.urja1920.Utilities.ExampleNotificationReceivedHandler;
 import com.onesignal.OneSignal;
 
-public class StickerApplication extends Application {
+public class ApplicationClass extends Application {
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         //Whatsapp work done here...
-        Fresco.initialize(this);
+        //Fresco.initialize(this);
 
         //One signal work done here...
         OneSignal.startInit(this)
