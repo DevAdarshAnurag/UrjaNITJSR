@@ -5,9 +5,4 @@
     <color name="colorAccent">#FFC300</color>
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
-
-    <!--whatsapp color-->
-    <color name="inactiveAddButtonColor">#B3B3B3</color>
-    <color name="infoPageBackgroundColor">#EBEBEB</color>
-    <color name="actionBarArrowColor">@color/colorAccent</color>
 </resources>
