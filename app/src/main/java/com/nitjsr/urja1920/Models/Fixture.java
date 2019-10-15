@@ -7,6 +7,7 @@ public class Fixture {
     public String score1,score2;
     public String s11,s12,s21,s22,s31,s32,s41,s42,s51,s52;
     public boolean live,completed;
+    public String uid;
 
     public Fixture() {
     }
