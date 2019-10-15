@@ -45,7 +45,7 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         cv1 = view.findViewById(R.id.sponsors);
         cv2 = view.findViewById(R.id.notify);
         cv3 = view.findViewById(R.id.maps);
-        cv4 = view.findViewById(R.id.stickers);
+        cv4 = view.findViewById(R.id.instagram);
         cv5 = view.findViewById(R.id.rate);
         cv6 = view.findViewById(R.id.facebook);
         cv1.setOnClickListener(this);
@@ -68,9 +68,11 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
         } else if (v.getId() == R.id.maps) {
             Intent intent = new Intent(getActivity(), MapActivity.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.stickers) {
-            Intent intent = new Intent(getActivity(), EntryActivity.class);
-            startActivity(intent);
+        } else if (v.getId() == R.id.instagram) {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.instagram.com/urja_nitjsr"));
+            startActivity(Intent.createChooser(intent,"See us on Instagram."));
+            //Intent intent = new Intent(getActivity(), EntryActivity.class);
+            //startActivity(intent);
         } else if (v.getId() == R.id.facebook) {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/urjanitjsr"));
             startActivity(Intent.createChooser(intent,"Join us on Facebook."));
