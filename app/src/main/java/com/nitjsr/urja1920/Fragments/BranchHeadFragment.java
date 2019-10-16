@@ -49,30 +49,58 @@ public class BranchHeadFragment extends Fragment {
         fillData();
         recyclerView=view.findViewById(R.id.branch_head_rv);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        CoreTeamAdapter coreTeamAdapter=new CoreTeamAdapter(posts,persons);
+        CoreTeamAdapter coreTeamAdapter=new CoreTeamAdapter(posts,persons,getContext());
         recyclerView.setAdapter(coreTeamAdapter);
     }
 
     public  void fillData()
     {
-        posts.add("Head");
-        posts.add("Head");
-        posts.add("Head");
+        posts.add("CSE HEAD");
+        posts.add("ECE HEAD");
+        posts.add("EEE HEAD");
+        posts.add("ME HEAD");
+        posts.add("MME HEAD");
+        posts.add("PIE HEAD");
+        posts.add("CE HEAD");
+        posts.add("MCA + MSc HEAD");
 
-        ArrayList<TeamPerson> name=new ArrayList<TeamPerson>();
-        name.add(new TeamPerson("Raja Kumar Singh Sinha Rajput",R.drawable.avatar,"8825326346","http://instagram.com/"));
-        name.add(new TeamPerson("Abhinay",R.drawable.avatar,"8825326346","http://instagram.com/"));
+        ArrayList<TeamPerson> cse=new ArrayList<TeamPerson>();
+        cse.add(new TeamPerson("Sravya",R.drawable.avatar,"9182884051","https://www.instagram.com/sravyalavu"));
+        cse.add(new TeamPerson("Aman Srivastava",R.drawable.avatar,"7903764490","https://www.instagram.com/"));
+
+        ArrayList<TeamPerson> ece=new ArrayList<TeamPerson>();
+        ece.add(new TeamPerson("Amit Prakash",R.drawable.avatar,"7992324380","https://www.instagram.com/im_amit_p"));
+        ece.add(new TeamPerson("Shalini",R.drawable.avatar,"7870328685","http://instagram.com/_shalinisinha_"));
+
+        ArrayList<TeamPerson> eee=new ArrayList<>();
+        eee.add(new TeamPerson("EEE Head",R.drawable.avatar,"",""));
+
+        ArrayList<TeamPerson> me=new ArrayList<>();
+        me.add(new TeamPerson("Amulya Toppo",R.drawable.avatar,"9771229237","https://www.instagram.com/7_dorcas"));
+
+        ArrayList<TeamPerson> mme=new ArrayList<>();
+        mme.add(new TeamPerson("Mansi",R.drawable.avatar,"9973356195","https://www.instagram.com/m.s._.drapetomaniac "));
+        mme.add(new TeamPerson("Aditya Kumar",R.drawable.avatar,"9939721444","https://www.instagram.com/kr_aditya28"));
+
+        ArrayList<TeamPerson> pie=new ArrayList<>();
+        pie.add(new TeamPerson("Abhishek Kumar",R.drawable.avatar,"7004129994","https://www.instagram.com/kumarabhi72/"));
+        pie.add(new TeamPerson("Jyoti Nirala",R.drawable.avatar,"7587309970","https://www.instagram.com/nirala_j/"));
+
+        ArrayList<TeamPerson> ce=new ArrayList<>();
+        ce.add(new TeamPerson("Simran Kour",R.drawable.avatar,"9835330142","https://www.instagram.com/simran_kour735/"));
 
 
-        ArrayList<TeamPerson> name1=new ArrayList<TeamPerson>();
-        name1.add(new TeamPerson("Abhinay",R.drawable.avatar,"8825326346","http://instagram.com/"));
-        name1.add(new TeamPerson("Abhinay",R.drawable.avatar,"8825326346","http://instagram.com/"));
+        ArrayList<TeamPerson> mcamsc=new ArrayList<>();
+        mcamsc.add(new TeamPerson("Jitendranath Tudu",R.drawable.avatar,"9046332109","https://www.instagram.com/tudu_j"));
 
-        ArrayList<TeamPerson> name3=new ArrayList<>();
-        name3.add(new TeamPerson("Abhinay",R.drawable.avatar,"8825326346","http://instagram.com/"));
-        persons.add(name3);
-        persons.add(name1);
-        persons.add(name);
+        persons.add(cse);
+        persons.add(ece);
+        persons.add(eee);
+        persons.add(me);
+        persons.add(mme);
+        persons.add(pie);
+        persons.add(ce);
+        persons.add(mcamsc);
     }
 
 }

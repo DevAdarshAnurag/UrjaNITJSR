@@ -23,15 +23,15 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class CoreTeamAdapter extends RecyclerView.Adapter<CoreTeamAdapter.MyViewHolder> {
 
     ArrayList<String> posts;
-    int pos;
     ArrayList<ArrayList<TeamPerson>> persons;
     Context context;
 
 
-    public  CoreTeamAdapter(ArrayList<String>posts, ArrayList<ArrayList<TeamPerson>> persons)
+    public  CoreTeamAdapter(ArrayList<String>posts, ArrayList<ArrayList<TeamPerson>> persons, Context context)
     {
         this.posts=posts;
         this.persons=persons;
+        this.context = context;
     }
 
 
@@ -39,7 +39,7 @@ public class CoreTeamAdapter extends RecyclerView.Adapter<CoreTeamAdapter.MyView
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        context=parent.getContext();
+
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item,parent,false);
         MyViewHolder myViewHolder=new MyViewHolder(view);
         return myViewHolder;
@@ -47,15 +47,13 @@ public class CoreTeamAdapter extends RecyclerView.Adapter<CoreTeamAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder,  int position) {
-        pos=position;
-
         holder.last_person_name.setText(persons.get(position).get(persons.get(position).size()-1).getName());
         holder.last_person_image.setImageResource(persons.get(position).get(persons.get(position).size()-1).getImgurl());
         holder.last_person_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:"+persons.get(pos).get(persons.get(pos).size()-1).getPhone()));
+                intent.setData(Uri.parse("tel:"+persons.get(position).get(persons.get(position).size()-1).getPhone()));
                 context.startActivity(intent);
             }
         });
@@ -63,7 +61,7 @@ public class CoreTeamAdapter extends RecyclerView.Adapter<CoreTeamAdapter.MyView
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(persons.get(pos).get(persons.get(pos).size()-1).getInsta()));
+                intent.setData(Uri.parse(persons.get(position).get(persons.get(position).size()-1).getInsta()));
                 context.startActivity(intent);
             }
         });

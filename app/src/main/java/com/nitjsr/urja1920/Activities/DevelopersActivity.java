@@ -23,12 +23,12 @@ public class DevelopersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_developers);
 
         ArrayList<Devperson> devs = new ArrayList<>();
-        devs.add(new Devperson("Adarsh Anurag", "", "", "", R.drawable.avatar));
-        devs.add(new Devperson("Aman Srivastav", "", "", "", R.drawable.avatar));
-        devs.add(new Devperson("Abhinay Kumar", "", "", "", R.drawable.avatar));
-        devs.add(new Devperson("Ritik Raj", "", "", "", R.drawable.avatar));
+        devs.add(new Devperson("Adarsh Anurag", "9801540653", "https://www.instagram.com/adarsh_nightmare_anurag", "", R.drawable.avatar));
+        devs.add(new Devperson("Aman Srivastava", "7903764490", "https://www.instagram.com/", "", R.drawable.avatar));
+        devs.add(new Devperson("Abhinay Kumar", "#", "https://www.instagram.com/", "", R.drawable.avatar));
+        devs.add(new Devperson("Ritik Raj", "#", "https://www.instagram.com/", "", R.drawable.avatar));
         recyclerView = findViewById(R.id.recycler);
-        developerAdapter = new DeveloperAdapter(devs);
+        developerAdapter = new DeveloperAdapter(devs,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(DevelopersActivity.this));
         recyclerView.setAdapter(developerAdapter);
     }

@@ -8,44 +8,44 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.nitjsr.urja1920.R;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.nitjsr.urja1920.Models.Devperson;
+import com.nitjsr.urja1920.R;
 
 import java.util.ArrayList;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.MyViewHolder> {
     ArrayList<Devperson> devs;
-    int pos;
     Context context;
-    public  DeveloperAdapter(ArrayList<Devperson> devs)
-    {
-        this.devs=devs;
+
+    public DeveloperAdapter(ArrayList<Devperson> devs, Context context) {
+        this.devs = devs;
+        this.context = context;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        context=parent.getContext();
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.developers_list_item,parent,false);
-        MyViewHolder viewHolder=new MyViewHolder(view);
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.developers_list_item, parent, false);
+        MyViewHolder viewHolder = new MyViewHolder(view);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        pos=position;
         holder.devname.setText(devs.get(position).getName());
         holder.devimg.setImageResource(devs.get(position).getImg());
         holder.insta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(devs.get(pos).getInsta()));
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(devs.get(position).getInsta()));
+                context.startActivity(intent);
             }
         });
 
@@ -53,18 +53,18 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.MyVi
             @Override
             public void onClick(View view) {
 
-                Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(devs.get(pos).getLinkd()));
-
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(devs.get(position).getLinkd()));
+                context.startActivity(intent);
             }
         });
 
         holder.whats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent=new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(devs.get(pos).getWhats()));
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + devs.get(position).getWhats()));
+                context.startActivity(intent);
             }
         });
 
@@ -78,15 +78,16 @@ public class DeveloperAdapter extends RecyclerView.Adapter<DeveloperAdapter.MyVi
     class MyViewHolder extends RecyclerView.ViewHolder {
         CircleImageView devimg;
         TextView devname;
-        ImageView insta,linkd,whats;
+        ImageView insta, linkd, whats;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            devimg=itemView.findViewById(R.id.dev_image);
-            devname=itemView.findViewById(R.id.dev_name);
-            insta=itemView.findViewById(R.id.insta);
-            whats=itemView.findViewById(R.id.whats);
-            linkd=itemView.findViewById(R.id.linkd);
+            devimg = itemView.findViewById(R.id.dev_image);
+            devname = itemView.findViewById(R.id.dev_name);
+            insta = itemView.findViewById(R.id.insta);
+            whats = itemView.findViewById(R.id.whats);
+            linkd = itemView.findViewById(R.id.linkd);
         }
     }
 }
