@@ -71,7 +71,7 @@ public class CoreTeamAdapter extends RecyclerView.Adapter<CoreTeamAdapter.MyView
             holder.card.setVisibility(View.GONE);
         else
             holder.card.setVisibility(View.VISIBLE);
-        ArrayList<TeamPerson> dupli=persons.get(position);
+        ArrayList<TeamPerson> dupli=new ArrayList<>(persons.get(position));
         if(dupli.size()%2!=0)
             dupli.remove(dupli.size()-1);
         InnerCoreTeamAdapter innerCoreTeamAdapter=new InnerCoreTeamAdapter(dupli);
@@ -80,8 +80,6 @@ public class CoreTeamAdapter extends RecyclerView.Adapter<CoreTeamAdapter.MyView
         holder.post.setText(posts.get(position));
         holder.innerrecyclerview.setAdapter(innerCoreTeamAdapter);
         holder.innerrecyclerview.setLayoutManager(gridLayoutManager);
-
-
 
     }
 

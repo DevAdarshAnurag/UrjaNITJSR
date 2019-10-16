@@ -52,9 +52,15 @@ public class SportsHeadFragment extends Fragment {
 
     public  void fillData()
     {
-        posts.add("Head");
-        posts.add("Head");
-        posts.add("Head");
+        posts.add("Volleyball");
+        posts.add("Basketball");
+        posts.add("Hockey");
+        posts.add("Athletics");
+        posts.add("Badminton");
+        posts.add("Table Tennis");
+        posts.add("Cricket");
+        posts.add("Chess");
+        posts.add("Football");
 
         ArrayList<TeamPerson> name=new ArrayList<TeamPerson>();
         name.add(new TeamPerson("Raja Kumar Singh Sinha Rajput",R.drawable.avatar,"8825326346","http://instagram.com/"));

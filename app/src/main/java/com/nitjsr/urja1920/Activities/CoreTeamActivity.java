@@ -38,7 +38,7 @@ public class CoreTeamActivity extends AppCompatActivity {
         {
             coreTabLayout.getTabAt(i).setText(tabNames[i]);
         }
-        coreViewPager.setCurrentItem(1);
+        coreViewPager.setCurrentItem(0);
 
     }
 
