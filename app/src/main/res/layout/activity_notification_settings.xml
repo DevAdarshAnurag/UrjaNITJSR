@@ -43,228 +43,237 @@
         android:textStyle="italic" />
 
     <LinearLayout
-        android:id="@+id/nsa_ll2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_below="@id/nsa_tv1"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
+        android:padding="4dp"
+        android:background="@drawable/border">
 
-        <TextView
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/nsa_ll2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Athletics"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
 
-        <Switch
-            android:id="@+id/switch_athletics"
-            android:layout_width="0dp"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Athletics"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_athletics"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_below="@id/nsa_ll2"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-    <LinearLayout
-        android:id="@+id/nsa_ll3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll2"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Cricket"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="0dp"
+            <Switch
+                android:id="@+id/switch_cricket"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll4"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Cricket"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
+            android:layout_below="@id/nsa_ll3"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-        <Switch
-            android:id="@+id/switch_cricket"
-            android:layout_width="0dp"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Football"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_football"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_below="@id/nsa_ll4"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-    <LinearLayout
-        android:id="@+id/nsa_ll4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll3"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Basketball"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="0dp"
+            <Switch
+                android:id="@+id/switch_basketball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll6"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Football"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
+            android:layout_below="@id/nsa_ll5"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-        <Switch
-            android:id="@+id/switch_football"
-            android:layout_width="0dp"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Volleyball"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_volleyball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll7"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_below="@id/nsa_ll6"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-    <LinearLayout
-        android:id="@+id/nsa_ll5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll4"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Hockey"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="0dp"
+            <Switch
+                android:id="@+id/switch_hockey"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll8"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Basketball"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
+            android:layout_below="@id/nsa_ll7"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-        <Switch
-            android:id="@+id/switch_basketball"
-            android:layout_width="0dp"
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Chess"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/switch_chess"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll9"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:layout_below="@id/nsa_ll8"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-    <LinearLayout
-        android:id="@+id/nsa_ll6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll5"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Badminton"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="0dp"
+            <Switch
+                android:id="@+id/switch_badminton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nsa_ll10"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Volleyball"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
+            android:layout_below="@id/nsa_ll9"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:weightSum="6">
 
-        <Switch
-            android:id="@+id/switch_volleyball"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="5"
+                android:text="Table Tennis"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp" />
 
-    <LinearLayout
-        android:id="@+id/nsa_ll7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll6"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Hockey"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
-
-        <Switch
-            android:id="@+id/switch_hockey"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/nsa_ll8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll7"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Chess"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
-
-        <Switch
-            android:id="@+id/switch_chess"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/nsa_ll9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll8"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Badminton"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
-
-        <Switch
-            android:id="@+id/switch_badminton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/nsa_ll10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nsa_ll9"
-        android:layout_margin="2dp"
-        android:orientation="horizontal"
-        android:weightSum="6">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="5"
-            android:text="Table Tennis"
-            android:textColor="@color/colorPrimary"
-            android:textSize="16sp" />
-
-        <Switch
-            android:id="@+id/switch_tt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            <Switch
+                android:id="@+id/switch_tt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
