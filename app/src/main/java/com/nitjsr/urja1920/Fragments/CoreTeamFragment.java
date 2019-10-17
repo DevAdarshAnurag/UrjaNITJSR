@@ -80,7 +80,7 @@ public class CoreTeamFragment extends Fragment {
 
         ArrayList<TeamPerson> name4=new ArrayList<>();
         name4.add(new TeamPerson("Surendra Junawa",R.drawable.surendra_junawa,"8078671778","https://www.instagram.com/s_junawa"));
-        name4.add(new TeamPerson("E. Rajesh",R.drawable.avatar,"#","https://www.instagram.com/"));
+        name4.add(new TeamPerson("E. Rajesh",R.drawable.rajesh,"#","https://www.instagram.com/"));
 
 
         ArrayList<TeamPerson> name5=new ArrayList<>();
@@ -88,7 +88,7 @@ public class CoreTeamFragment extends Fragment {
         name5.add(new TeamPerson("Shivani Thakur",R.drawable.shivani_thakur,"7073966727,","https://www.instagram.com/_vivacious_28"));
 
         ArrayList<TeamPerson> name6=new ArrayList<>();
-        name6.add(new TeamPerson("Sandeep",R.drawable.avatar,"9133553472","https://www.instagram.com/sandeep_sunny_036"));
+        name6.add(new TeamPerson("Sandeep",R.drawable.sandeep,"9133553472","https://www.instagram.com/sandeep_sunny_036"));
         name6.add(new TeamPerson("Rahul",R.drawable.rahul_anand,"7903939288","https://www.instagram.com/rahulanand.ra28"));
 
         ArrayList<TeamPerson> name7=new ArrayList<>();
@@ -122,7 +122,7 @@ public class CoreTeamFragment extends Fragment {
         name10.add(new TeamPerson("Abhishek Kumar",R.drawable.abhishek_kumar,"#","https://www.instagram.com/"));
         name10.add(new TeamPerson("Yash Kumar Jhanwar",R.drawable.yash_kumar_jhanwar,"9602273553","https://www.instagram.com/yash_jhanwar_yj"));
         name10.add(new TeamPerson("Amulya Toppo",R.drawable.amulya_toppo,"9771229237","https://www.instagram.com/7_dorcas"));
-        name10.add(new TeamPerson("Anudeep Reddy",R.drawable.avatar,"#","https://www.instagram.com/"));
+        name10.add(new TeamPerson("Anudeep Reddy",R.drawable.anudeep_reddy,"#","https://www.instagram.com/"));
 
         persons.add(name);
         persons.add(name1);
