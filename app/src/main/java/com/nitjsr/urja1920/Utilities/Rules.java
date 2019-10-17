@@ -13,7 +13,7 @@ public class Rules {
             "6.Players should be in proper dress(Sports T-shirt,Trousers and Shoes ) otherwise they\n" +
             "won’t be allowed to play.\n" +
             "7.List of 15 members squad should be submitted by respective Branch Heads to the\n" +
-            "Cricket Head by latest 20th September 2018.\n" +
+            "Cricket Head by latest 25th October 2019.\n" +
             "8.Playing XI should be from the 15 members squad only,no other player will be allowed\n" +
             "to play if he is not in the squad.\n" +
             "9.A bowler can bowl a maximum of 3 overs per match(including league\n" +
@@ -483,7 +483,7 @@ public class Rules {
             "14. \tAfter third illegal move by the same player, the arbiter shall declare the game lost by the same player. \n" +
             "15. \tThe game is declared as draw upon correct claim by the player having the move, when the same position at least the third time (not necessarily by a repetition of moves) has appeared, and the player claiming the draw has the move. \n" +
             "16. \tThe game is drawn when a position is reached from which a checkmate cannot occur by any possible series of legal moves. \n" +
-            "17. \tUnless announced otherwise in advance, a player who wins his game scores two points (2), a player who loses scores no points (0) and a player who draws his game scores one point (1). \n" +
+            "17. \tUnless announced otherwise in advance, a player who wins his game scores one points (1), a player who loses scores no points (0) and a player who draws his/her game scores half point (0.5). \n" +
             "18. \tThe team with the higher score will be declared the winner of the game and will get 2 points and in case of a draw, each team will get 1 point each. \n" +
             "19. \tThe player shall take no action that will bring the game of chess into disrepute. \n" +
             "20. \tPlayers are not allowed to leave the playing venue without the permission from the arbiter. \n" +

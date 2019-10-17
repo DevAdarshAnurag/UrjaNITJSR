@@ -67,13 +67,13 @@ public class MoreFragment extends Fragment implements View.OnClickListener {
             Intent intent = new Intent(getActivity(), MapActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.instagram) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.instagram.com/urja_nitjsr"));
-            startActivity(Intent.createChooser(intent, "See us on Instagram."));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/urja_nitjsr"));
+            startActivity(intent);
             //Intent intent = new Intent(getActivity(), EntryActivity.class);
             //startActivity(intent);
         } else if (v.getId() == R.id.facebook) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/urjanitjsr"));
-            startActivity(Intent.createChooser(intent, "Join us on Facebook."));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/urjanitjsr"));
+            startActivity(intent);
 
         } else if (v.getId() == R.id.rate) {
             Uri uri = Uri.parse("market://details?id=" + getContext().getPackageName());

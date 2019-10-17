@@ -63,41 +63,41 @@ public class SportsHeadFragment extends Fragment {
         posts.add("Football");
 
         ArrayList<TeamPerson> VolleyHead=new ArrayList<TeamPerson>();
-        VolleyHead.add(new TeamPerson("Mritunjay Kumar",R.drawable.avatar,"######","http://instagram.com/"));
-        VolleyHead.add(new TeamPerson("Poonam Kujur",R.drawable.avatar,"####","http://instagram.com/"));
+        VolleyHead.add(new TeamPerson("Mritunjay Kumar",R.drawable.mritunjay_kumar,"######","http://instagram.com/"));
+        VolleyHead.add(new TeamPerson("Poonam Kujur",R.drawable.poonam,"####","http://instagram.com/"));
 
         ArrayList<TeamPerson> BasketHead=new ArrayList<TeamPerson>();
-        BasketHead.add(new TeamPerson("Abhishek Mishra",R.drawable.avatar,"#######","http://instagram.com/"));
-        BasketHead.add(new TeamPerson("Shivani Thakur",R.drawable.avatar,"7073966727","http://instagram.com/_vivacious_28"));
+        BasketHead.add(new TeamPerson("Abhishek Mishra",R.drawable.abhishekh_kumar_mishra,"#######","http://instagram.com/"));
+        BasketHead.add(new TeamPerson("Shivani Thakur",R.drawable.shivani_thakur,"7073966727","https://www.instagram.com/_vivacious_28"));
 
         ArrayList<TeamPerson> HockeyHead=new ArrayList<TeamPerson>();
-        HockeyHead.add(new TeamPerson("Akash Kumar Rajwar",R.drawable.avatar,"7004316234","http://instagram.com/badass_rajwar_7"));
+        HockeyHead.add(new TeamPerson("Akash Kumar Rajwar",R.drawable.akash_rajwar,"7004316234","https://www.instagram.com/badass_rajwar_7"));
 
 
         ArrayList<TeamPerson> AthletHead=new ArrayList<TeamPerson>();
-        AthletHead.add(new TeamPerson("Surendra Junawa",R.drawable.avatar,"#######","http://instagram.com/"));
-        AthletHead.add(new TeamPerson("Riya Mehta",R.drawable.avatar,"7870349214","http://instagram.com/"));
+        AthletHead.add(new TeamPerson("Surendra Junawa",R.drawable.surendra_junawa,"#######","http://instagram.com/"));
+        AthletHead.add(new TeamPerson("Riya Mehta",R.drawable.riya_mehta,"7870349214","http://instagram.com/"));
 
         ArrayList<TeamPerson> BadHead=new ArrayList<TeamPerson>();
-        BadHead.add(new TeamPerson("Basant Jha",R.drawable.avatar,"8340355127","http://instagram.com/basantjha70"));
-        BadHead.add(new TeamPerson("Smita Kumari",R.drawable.avatar,"####","http://instagram.com/"));
+        BadHead.add(new TeamPerson("Basant Jha",R.drawable.basant,"8340355127","http://instagram.com/basantjha70"));
+        BadHead.add(new TeamPerson("Smita Kumari",R.drawable.smita_kumari,"####","http://instagram.com/"));
 
         ArrayList<TeamPerson> TableHead=new ArrayList<TeamPerson>();
-        TableHead.add(new TeamPerson("Yatharth Rohtagi",R.drawable.avatar,"######","http://instagram.com/"));
-        TableHead.add(new TeamPerson("Shrutika",R.drawable.avatar,"7632007676","http://instagram.com/shrutikashukla7"));
+        TableHead.add(new TeamPerson("Yatharth Rohtagi",R.drawable.yatharth_rohatgi,"######","http://instagram.com/"));
+        TableHead.add(new TeamPerson("Shrutika",R.drawable.shrutika_shukla,"7632007676","http://instagram.com/shrutikashukla7"));
 
         ArrayList<TeamPerson> CricketHead=new ArrayList<TeamPerson>();
-        CricketHead.add(new TeamPerson("Surendra Oraon",R.drawable.avatar,"######","http://instagram.com/"));
+        CricketHead.add(new TeamPerson("Surendra Oraon",R.drawable.sulendra_oroan,"######","http://instagram.com/"));
 
 
         ArrayList<TeamPerson> ChessHead=new ArrayList<TeamPerson>();
-        ChessHead.add(new TeamPerson("Isharul Haque",R.drawable.avatar,"8210274067","http://instagram.com/isharulhaque"));
-        ChessHead.add(new TeamPerson("Usha",R.drawable.avatar,"#######","http://instagram.com/"));
+        ChessHead.add(new TeamPerson("Isharul Haque",R.drawable.isharul_haque,"8210274067","http://instagram.com/isharulhaque"));
+        ChessHead.add(new TeamPerson("Usha",R.drawable.usha_kumari,"#######","http://instagram.com/"));
 
 
 
         ArrayList<TeamPerson> FootballHead=new ArrayList<TeamPerson>();
-        FootballHead.add(new TeamPerson("Gurdeep Singh Dagar",R.drawable.avatar,"8979660904","http://instagram.com/gurdeep_dagar001"));
+        FootballHead.add(new TeamPerson("Gurdeep Singh Dagar",R.drawable.gurdeep_dagar,"8979660904","http://instagram.com/gurdeep_dagar001"));
 
 
 
