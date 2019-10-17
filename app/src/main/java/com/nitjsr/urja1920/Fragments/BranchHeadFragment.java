@@ -74,6 +74,8 @@ public class BranchHeadFragment extends Fragment {
 
         ArrayList<TeamPerson> eee=new ArrayList<>();
         eee.add(new TeamPerson("Shalini",R.drawable.shalini_sinha,"7870328685","http://instagram.com/_shalinisinha_"));
+        eee.add(new TeamPerson("Shivam Singh",R.drawable.shivam_singh,"7229832092","http://instagram.com/i_cvam"));
+
 
         ArrayList<TeamPerson> me=new ArrayList<>();
         me.add(new TeamPerson("Amulya Toppo",R.drawable.amulya_toppo,"9771229237","https://www.instagram.com/7_dorcas"));

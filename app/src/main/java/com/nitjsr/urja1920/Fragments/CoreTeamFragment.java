@@ -73,7 +73,7 @@ public class CoreTeamFragment extends Fragment {
 
 
         ArrayList<TeamPerson> name2=new ArrayList<>();
-        name2.add(new TeamPerson("Aditya Parihar",R.drawable.avatar,"#","https://www.instagram.com/"));
+        name2.add(new TeamPerson("Aditya Parihar",R.drawable.aditya_parihar,"7632013071","https://www.instagram.com/adityaparihar02"));
 
         ArrayList<TeamPerson> name3=new ArrayList<>();
         name3.add(new TeamPerson("Naman Kumar",R.drawable.naman_kumar,"9631835030","https://www.instagram.com/naman_shaundik"));
@@ -96,7 +96,7 @@ public class CoreTeamFragment extends Fragment {
 
         ArrayList<TeamPerson> name8=new ArrayList<>();
         name8.add(new TeamPerson("Adarsh Anurag",R.drawable.adarsh_anurag,"8797834204","https://www.instagram.com/adarsh_nightmare_anurag/"));
-        name8.add(new TeamPerson("Aman Kr. Srivastava",R.drawable.avatar,"7903764490","https://www.instagram.com/"));
+        name8.add(new TeamPerson("Aman Kr. Srivastava",R.drawable.aman_srivastava,"7903764490","https://www.instagram.com/"));
 
         ArrayList<TeamPerson> name9=new ArrayList<>();
         name9.add(new TeamPerson("Sudhanshu Prakash",R.drawable.sudhanshu_prakash,"8862927236","https://www.instagram.com/d4danton"));
@@ -113,7 +113,7 @@ public class CoreTeamFragment extends Fragment {
         name10.add(new TeamPerson("Prashant Gupta",R.drawable.prashant_gupta,"7004465117","https://www.instagram.com/_just__being___me_"));
         name10.add(new TeamPerson("Mounika",R.drawable.kasu_mounika,"####","https://www.instagram.com/"));
         name10.add(new TeamPerson("Ade Mighty",R.drawable.lynn_ade_mighty,"7013979401","https://www.instagram.com/ravelmighty"));
-        name10.add(new TeamPerson("Rajat Singh",R.drawable.avatar,"######","https://www.instagram.com/"));
+        name10.add(new TeamPerson("Rajat Kumar Singh",R.drawable.rajat_kumar_singh,"7004048441","https://www.instagram.com/"));
         name10.add(new TeamPerson("Poonam",R.drawable.poonam,"######","https://www.instagram.com/"));
         name10.add(new TeamPerson("Rekha Kumari",R.drawable.rekha_kumari,"7488998791","https://www.instagram.com/rekkaljugani"));
         name10.add(new TeamPerson("Vipin Singh Negi",R.drawable.vipin_singh_negi,"7651928718","https://www.instagram.com/vipin_singh_negi"));

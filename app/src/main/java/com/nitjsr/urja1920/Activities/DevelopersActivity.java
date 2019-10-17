@@ -24,9 +24,9 @@ public class DevelopersActivity extends AppCompatActivity {
 
         ArrayList<Devperson> devs = new ArrayList<>();
         devs.add(new Devperson("Adarsh Anurag", "9801540653", "https://www.instagram.com/adarsh_nightmare_anurag", "https://www.linkedin.com/in/adarsh-anurag-b7a0ba128/", R.drawable.adarsh_anurag));
-        devs.add(new Devperson("Aman Srivastava", "7903764490", "https://www.instagram.com/", "https://www.linkedin.com", R.drawable.avatar));
-        devs.add(new Devperson("Abhinay Kumar", "#", "https://www.instagram.com/", "https://www.linkedin.com", R.drawable.avatar));
-        devs.add(new Devperson("Ritik Raj", "#", "https://www.instagram.com/", "https://www.linkedin.com", R.drawable.avatar));
+        devs.add(new Devperson("Aman Srivastava", "7903764490", "https://www.instagram.com/", "https://www.linkedin.com/in/aman-kumar-srivastava-27152113a", R.drawable.aman_srivastava));
+        devs.add(new Devperson("Abhinay Kumar", "88253 26346", "https://www.instagram.com/kumarabhinay599", "https://www.linkedin.com/in/abhinay-kumar-3b3345178", R.drawable.abhinay));
+        devs.add(new Devperson("Ritik Raj", "8709184657", "https://www.instagram.com/rajlevel", "https://www.linkedin.com/in/ritik-raj-67870817a", R.drawable.ritik_raj));
         recyclerView = findViewById(R.id.recycler);
         developerAdapter = new DeveloperAdapter(devs,this);
         recyclerView.setLayoutManager(new LinearLayoutManager(DevelopersActivity.this));

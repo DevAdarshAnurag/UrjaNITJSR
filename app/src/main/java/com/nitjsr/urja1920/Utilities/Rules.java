@@ -431,7 +431,7 @@ public class Rules {
             "Close";
 
     static String volleyball="GIRLS: \n" +
-            "o \tAll the league matches will be played in 3 sets, one of which is of 15 points and other two of 25 points. After each set, there will be a break of 3 minutes.\n" +
+            "o \tAll the league matches will be played in 3 sets. First two sets will be of 25 points and last will be of 15. After each set, there will be a break of 3 minutes.\n" +
             "o \tThe best of three sets will determine the winner. \n" +
             "o \tTwo timeouts are allowed per team of 1 minute each. \n" +
             "o \tThere will be no rotation during the game. \n" +
@@ -441,10 +441,11 @@ public class Rules {
             "o \tDecision of the referee will be final. In case of any ambiguity, core team will have the final say. \n" +
             "o \tA set is won by the team which first scores 25 points with a minimum lead of two points.  In the case of a 24-24 tie, play is continued until a two-point lead is achieved. \n" +
             "o \tCourt and Service in hand will be decided by the toss at the beginning of the match. \n" +
+            "o \tAll the knockout matches (i.e. semis and finals) will be best of 5 sets. First 4 sets will be 25 points and final set will be of 15 points.  After each set, there will be a break of 3 minutes.\n"+
             "\n" +
             "\n" +
             "BOYS: \n" +
-            "o \tAll the league matches will be played in 3 sets, one of which is of 15 points and other two of 25 points. After each set, there will be a break of 3 minutes.\n" +
+            "o \tAll the league matches will be played in 3 sets. First two sets will be of 25 points and last will be of 15. After each set, there will be a break of 3 minutes.\n" +
             "o \tThe best of three sets will determine the winner. \n" +
             "o \tTwo timeouts are allowed per team of 1 minute each. \n" +
             "o \tThere will be no rotation during the game. \n" +
@@ -454,7 +455,7 @@ public class Rules {
             "o \tDecision of the referee will be final. In case of any ambiguity, core team will have the final say.\n" +
             "o \tA set is won by the team which first scores 25 points with a minimum lead of two points.  In the case of a 24-24 tie, play is continued until a two-point lead is achieved. \n" +
             "o \tCourt and Service in hand will be decided by the toss at the beginning of the match until a deciding set (i.e. 5th set) is to be played.  For a deciding set, new toss will be carried out. \n" +
-            "o \tAll the knockout matches (i.e. semis and finals) will be played in 5 sets, each of which is of 25 points.  After each set, there will be a break of 3 minutes. ";
+            "o \tAll the knockout matches (i.e. semis and finals) will be best of 5 sets. First 4 sets will be 25 points and final set will be of 15 points.  After each set, there will be a break of 3 minutes. ";
 
     static String hockey="1. \tAll the matches will be played in 4 quarters of 10 minutes each. After each quarter, there will be a break of 3 minutes.\n" +
             "2. \tPoints: Winner: 3 Loser: 0, In case of ties in league matches, 1 point each will be awarded to both the teams. \n" +
