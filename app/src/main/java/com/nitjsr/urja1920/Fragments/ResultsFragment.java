@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,6 +40,7 @@ public class ResultsFragment extends Fragment {
     ResultsAdapter adapter;
     private DatabaseReference dbRef;
     private int type = -1;
+    TextView textView;
 
     public ResultsFragment() {
         // Required empty public constructor
@@ -63,6 +65,7 @@ public class ResultsFragment extends Fragment {
         rvResults = view.findViewById(R.id.rv_results);
         List<Fixture> fixtureList = new ArrayList<>();
 
+        textView = view.findViewById(R.id.tv_results);
         rvResults.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new ResultsAdapter(getContext(), fixtureList);
         rvResults.setAdapter(adapter);
@@ -135,6 +138,10 @@ public class ResultsFragment extends Fragment {
                 }
                 sort(fixtureList);
                 adapter.notifyDataSetChanged();
+                if(fixtureList.isEmpty())
+                    textView.setVisibility(View.VISIBLE);
+                else
+                    textView.setVisibility(View.GONE);
             }
 
             @Override

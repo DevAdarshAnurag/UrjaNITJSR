@@ -129,22 +129,17 @@ public class Rules {
 
     static String badminton="o \tAny player can play only 2 matches (i.e.,one singles and one doubles) \n" +
             "\n" +
-            "\n" +
             "o \tIn case of tie between teams i.e., two or many teams have won the same number of matches with teams then , number of wins against the teams that played will be counted.the team with most number of wins will be qualified to semis\n" +
             "\n" +
-            "\n" +
             "o \tEven if the number of wins are same , number of sets played will be counted.the team with least number of sets played will be qualified. \n" +
-            "\n" +
             "\n" +
             "o \t5 matches will be happening 1st singles , 2nd singles, doubles , reverse singles and reverse doubles out of these the team which wins 3 out of 5 is the winner\n" +
             "\n" +
             "TOSS -\n" +
             "o \tBefore play commences, a toss shall be conducted and the side winning the toss shall exercise the choice in either Law 6.1.1 or 6.1.2: \n" +
             "\n" +
-            "\n" +
             "o \t6.1.1 to serve or receive first; \n" +
             "o \t6.1.2 to start play at one end of the court or the other. \n" +
-            "\n" +
             "\n" +
             "o \tThe side losing the toss shall then exercise the remaining choice. \n" +
             "\n" +
@@ -157,166 +152,117 @@ public class Rules {
             "\n" +
             "o \tIf the score becomes 20-all, the side which gains a two point lead first, shall win that game. \n" +
             "\n" +
-            "\n" +
             "o \tIf the score becomes 29-all, the side scoring the 30th point shall win that game. \n" +
-            "\n" +
             "\n" +
             "o \tThe side winning a game shall serve first in the next game. \n" +
             "CHANGE OF ENDS -\n" +
             "o \tPlayers shall change ends: \n" +
             "\n" +
-            "\n" +
             "o \tat the end of the first game; \n" +
             "o \tat the end of the second game, if there is to be a third game; and\n" +
             "o \tin the third game when a side first scores 11 points. \n" +
-            "\n" +
             "\n" +
             "o \tIf the ends are not changed as indicated in Law 1, it shall be done so as soon as the mistake is discovered and when the shuttle is not in play. The existing score shall stand. \n" +
             "SERVICE -\n" +
             "o \tIn a correct service, \n" +
             "\n" +
-            "\n" +
             "o \tneither side shall cause undue delay to the delivery of the service once the server and the receiver are ready for the service. On completion of the backward movement of server\\'s racket head, any delay in the start of the service (Law 2), shall be considered to be an undue delay; \n" +
             "\n" +
-            "\n" +
             "o \tthe server and the receiver shall stand within diagonally opposite service courts without touching the boundary lines of these service courts; \n" +
-            "\n" +
             "\n" +
             "o \tsome part of both feet of the server and the receiver shall remain in contact with the surface of the court in a stationary position from the start of the service (Law 2) until the service is delivered (Law 3); \n" +
             "\n" +
             "o \tthe server\\'s racket shall initially hit the base of the shuttle; \n" +
             "\n" +
-            "\n" +
             "o \tthe whole shuttle shall be below the server\\'s waist at the instant of being hit by the server\\'s racket. The waist shall be considered to be an imaginary line round the body, level with the lowest part of the server\\'s bottom rib; \n" +
-            "\n" +
             "\n" +
             "o \tthe shaft of the server\\'s racket at the instant of hitting the shuttle shall be pointing in a downward direction; \n" +
             "\n" +
-            "\n" +
             "o \tthe movement of the server\\'s racket shall continue forwards from the start of the service (Law 2) until the service is delivered (Law 3); \n" +
-            "\n" +
             "\n" +
             "o \tthe flight of the shuttle shall be upwards from the server\\'s racket to pass over the net so that, if not intercepted, it shall land in the receiver\\'ss service court (i. e. on or within the boundary lines); and\n" +
             "\n" +
-            "\n" +
             "o \tin attempting to serve, the server shall not miss the shuttle. \n" +
-            "\n" +
             "\n" +
             "o \tOnce the players are ready for the service, the first forward movement of the server\\'s racket head shall be the start of the service.\n" +
             "\n" +
-            "\n" +
             "o \tOnce started (Law 2), the service is delivered when the shuttle is hit by the server\\'s racket or, in attempting to serve, the server misses the shuttle. \n" +
             "\n" +
-            "\n" +
             "o \tThe server shall not serve before the receiver is ready. However, the receiver shall be considered to have been ready if a return of the service is attempted. \n" +
-            "\n" +
             "\n" +
             "o \tIn doubles, during the delivery of service (Law 2, 3), the partners may take up any positions within their respective courts, which do not unsight the opposing server or receiver. \n" +
             "SINGLES -\n" +
             "o \tServing and receiving courts\n" +
             "\n" +
-            "\n" +
             "o \tThe players shall serve from, and receive in, their respective right service courts when the server has not scored or has scored an even number of points in that game. \n" +
-            "\n" +
             "\n" +
             "o \tThe players shall serve from, and receive in, their respective left service courts when the server has scored an odd number of points in that game. \n" +
             "\n" +
-            "\n" +
             "o \tOrder of play and position on court\n" +
-            "\n" +
             "\n" +
             "o \tIn a rally, the shuttle may be hit by the server and the receiver alternately, from any position on that player\\'s side of the net, until the shuttle ceases to be in play (Law 15). \n" +
             "\n" +
-            "\n" +
             "o \tScoring and serving\n" +
             "\n" +
-            "\n" +
             "o \tIf the server wins a rally (Law 7.3), the server shall score a point. The server shall then serve again from the alternate service court. \n" +
-            "\n" +
             "\n" +
             "o \tIf the receiver wins a rally (Law 7.3), the receiver shall score a point. The receiver shall then become the new server. \n" +
             "DOUBLES -\n" +
             "o \tServing and receiving courts\n" +
             "\n" +
-            "\n" +
             "o \tA player of the serving side shall serve from the right service court when the serving side has not scored or has scored an even number of points in that game. \n" +
-            "\n" +
             "\n" +
             "o \tA player of the serving side shall serve from the left service court when the serving side has scored an odd number of points in that game. \n" +
             "\n" +
-            "\n" +
             "o \tThe player of the receiving side who served last shall stay in the same service court from where he served last. The reverse pattern shall apply to the receiver\\'ss partner. \n" +
-            "\n" +
             "\n" +
             "o \tThe player of the receiving side standing in the diagonally opposite service court to the server shall be the receiver. \n" +
             "\n" +
-            "\n" +
             "o \tThe players shall not change their respective service courts until they win a point when their side is serving. \n" +
-            "\n" +
             "\n" +
             "o \tService in any turn of serving shall be delivered from the service court corresponding to the serving side\\'ss score, except as provided in Law after this. \n" +
             "\n" +
-            "\n" +
             "o \tOrder of play and position on court\n" +
-            "\n" +
             "\n" +
             "o \tAfter the service is returned, in a rally, the shuttle may be hit by either player of the serving side and either player of the receiving side alternately, from any position on that player\\'ss side of the net, until the shuttle ceases to be in play. \n" +
             "\n" +
-            "\n" +
             "o \tScoring and serving\n" +
-            "\n" +
             "\n" +
             "o \tIf the serving side wins a rally, the serving side shall score a point. The server shall then serve again from the alternate service court. \n" +
             "\n" +
-            "\n" +
             "o \tIf the receiving side wins a rally, the receiving side shall score a point. The receiving side shall then become the new serving side. \n" +
             "\n" +
-            "\n" +
             "o \tSequence of serving\n" +
-            "\n" +
             "In any game, the right to serve shall pass consecutively: \n" +
-            "\n" +
             "\n" +
             "o \tfrom the initial server who started the game from the right service court\n" +
             "\n" +
-            "\n" +
             "o \tto the partner of the initial receiver. \n" +
             "\n" +
-            "\n" +
             "o \tto the partner of the initial server\n" +
-            "\n" +
             "o \tto the initial receiver, \n" +
-            "\n" +
             "\n" +
             "o \tto the initial server and so on. \n" +
             "\n" +
-            "\n" +
             "o \tNo player shall serve or receive out of turn, or receive two consecutive services in the same game, except as provided in the law after this. \n" +
             "\n" +
-            "\n" +
             "o \tEither player of the winning side may serve first in the next game, and either player of the losing side may receive first in the next game. \n" +
-            "\n" +
             "\n" +
             "SERVICE COURT ERRORS -\n" +
             "o \tA service court error has been made when a player: \n" +
             "\n" +
             "o \thas served or received out of turn; or\n" +
             "\n" +
-            "\n" +
             "o \thas served or received from the wrong service court; \n" +
             "\n" +
-            "\n" +
             "o \tIf a service court error is discovered, the error shall be corrected and the existing score shall stand. \n" +
-            "\n" +
             "\n" +
             "FAULTS -\n" +
             "It shall be a ˜fault\\'s:\n" +
             "\n" +
-            "\n" +
             "o \tif a service is not correct\n" +
             "\n" +
             "o \tif, in service, the shuttle: \n" +
-            "\n" +
             "\n" +
             "o \tis caught on the net and remains suspended on its top; \n" +
             "\n" +
@@ -327,105 +273,73 @@ public class Rules {
             "\n" +
             "o \tif in play, the shuttle: \n" +
             "\n" +
-            "\n" +
             "o \tlands outside the boundaries of the court (i. e. not on or within the boundary lines); \n" +
-            "\n" +
             "\n" +
             "o \tpasses through or under the net; \n" +
             "\n" +
-            "\n" +
             "o \tfails to pass over the net; \n" +
-            "\n" +
             "\n" +
             "o \ttouches the ceiling or side walls; \n" +
             "\n" +
-            "\n" +
             "o \ttouches the person or dress of a player; \n" +
-            "\n" +
             "\n" +
             "o \ttouches any other object or person outside the court; \n" +
             "\n" +
-            "\n" +
             "o \tis caught and held on the racket and then slung during the execution of a stroke; \n" +
-            "\n" +
             "\n" +
             "o \tis hit twice in succession by the same player. However, a shuttle hitting the head and the stringed area of the racket in one stroke shall not be a â€˜fault\\'s;\n" +
             "\n" +
-            "\n" +
             "o \tis hit by a player and the player\\'s partner successively; or\n" +
-            "\n" +
             "\n" +
             "o \ttouches a player\\'s racket and does not travel towards the opponent\\'s court; \n" +
             "\n" +
-            "\n" +
             "o \tif, in play, a player: \n" +
-            "\n" +
             "\n" +
             "o \ttouches the net or its supports with racket, person or dress; \n" +
             "\n" +
-            "\n" +
             "o \tinvades an opponent\\'s court over the net with racket or person except that the striker may follow the shuttle over the net with the racket in the course of a stroke after the initial point of contact with the shuttle is on the striker\\'ss side of the net; \n" +
-            "\n" +
             "\n" +
             "o \tinvades an opponent\\'s court under the net with racket or person such that an opponent is obstructed or distracted; or\n" +
             "\n" +
-            "\n" +
             "o \tobstructs an opponent, i.e. prevents an opponent from making a legal stroke where the shuttle is followed over the net; \n" +
             "\n" +
-            "\n" +
             "o \tdeliberately distracts an opponent by any action such as shouting or making gestures; \n" +
-            "\n" +
             "\n" +
             "o \tif a player is guilty of flagrant, repeated or persistent offences under Law 16. \n" +
             "LETS -\n" +
             "o \t˜Let\\'s shall be called by the umpire, or by a player (if there is no umpire), to halt play. \n" +
             "\n" +
-            "\n" +
             "o \tIt shall be a a let, if: \n" +
-            "\n" +
             "\n" +
             "o \tthe server serves before the receiver is ready; \n" +
             "\n" +
-            "\n" +
             "o \tduring service, the receiver and the server are both faulted; \n" +
-            "\n" +
             "\n" +
             "o \tafter the service is returned, the shuttle is: caught on the net and remains suspended on its top, or after passing over the net is caught in the net; \n" +
             "\n" +
-            "\n" +
             "o \tduring play, the shuttle disintegrates and the base completely separates from the rest of the shuttle; \n" +
-            "\n" +
             "\n" +
             "o \tin the opinion of the umpire, play is disrupted or a player of the opposing side is distracted by a coach; \n" +
             "\n" +
-            "\n" +
             "o \ta line judge is unsighted and the umpire is unable to make a decision; or\n" +
             "\n" +
-            "\n" +
             "o \tany unforeseen or accidental situation has occurred. \n" +
-            "\n" +
             "\n" +
             "o \tWhen a a let\\'s occurs, play since the last service shall not count and the player who served last shall serve again. \n" +
             "SHUTTLE NOT IN PLAY-\n" +
             "A shuttle is not in play when: \n" +
             "\n" +
-            "\n" +
             "o \tit strikes the net or post and starts to fall towards the surface of the court on the striker\\'s side of the net; \n" +
             "\n" +
-            "\n" +
             "o \tit hits the surface of the court; or\n" +
-            "\n" +
             "\n" +
             "o \ta fault\\'s or a let\\'s has occurred. \n" +
             "CONTINUOUS PLAY, MISCONDUCT AND PENALTIES -\n" +
             "o \tPlay shall be continuous from the first service until the match is concluded, except as allowed in Laws 16.2 and 16.3. \n" +
             "\n" +
-            "\n" +
             "o \tIntervals: \n" +
             "\n" +
-            "\n" +
             "o \tnot exceeding 60 seconds during each game when the leading score reaches 11 points; and\n" +
-            "\n" +
             "\n" +
             "o \tnot exceeding 120 seconds between the first and second game, and between the second and third game shall be allowed in all matches. \n" +
             "Close";
