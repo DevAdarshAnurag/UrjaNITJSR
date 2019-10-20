@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -17,6 +19,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.nitjsr.urja1920.BuildConfig;
 import com.nitjsr.urja1920.Fragments.AboutUsFragment;
 import com.nitjsr.urja1920.Fragments.EventsFragment;
 import com.nitjsr.urja1920.Fragments.LeaderboardFragment;
@@ -79,7 +82,7 @@ public class HomeActivity extends AppCompatActivity {
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navigation.setSelectedItemId(R.id.navigation_live);
-        dbCheck();
+        dbTask();
     }
 
     private boolean loadFragment(Fragment fragment) {
@@ -112,58 +115,52 @@ public class HomeActivity extends AppCompatActivity {
         }
     }
 
-    private void dbCheck() {
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        firebaseDatabase.setPersistenceEnabled(true);
-        dbRef = firebaseDatabase.getReference("ready");
-        dbRef.keepSynced(true);
-        dbRef.addValueEventListener(new ValueEventListener() {
+    void dbTask() {
+        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        reference.child("appurl").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                ready = dataSnapshot.getValue(String.class);
-                androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(HomeActivity.this);
-                if (ready.equalsIgnoreCase("update")) {
-                    builder.setTitle("Update Available");
-                    builder.setMessage("Update Urja app to stay connected...");
-                    builder.setCancelable(false);
-                    builder.setPositiveButton("Update", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            Intent i = new Intent(Intent.ACTION_VIEW);
-                            i.setData(Uri.parse("http://play.google.com/store/apps/details?id=" + getPackageName()));
-                            startActivity(i);
-                            System.gc();
-                            System.exit(0);
+                final String url = dataSnapshot.getValue(String.class);
+                reference.child("Version").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        int version = dataSnapshot.getValue(Integer.class);
+                        try {
+
+                            if (version > BuildConfig.VERSION_CODE) {
+                                AlertDialog.Builder alertDialog = new AlertDialog.Builder(HomeActivity.this);
+                                alertDialog.setTitle("Update your App");
+                                alertDialog.setMessage("A new update is available.");
+                                alertDialog.setCancelable(false);
+                                alertDialog.setPositiveButton(
+                                        "UPDATE",
+                                        new DialogInterface.OnClickListener() {
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                Intent intent = new Intent(Intent.ACTION_VIEW);
+                                                intent.setData(Uri.parse(url));
+                                                startActivity(intent);
+                                                System.gc();
+                                                System.exit(0);
+                                            }
+                                        });
+
+                                alertDialog.show();
+                            }
+                        } catch (Exception e) {
+                            //
                         }
-                    });
-                    try {//do not remove try catch block
-                        builder.show();
-                    } catch (Exception e) {
-                        e.printStackTrace();
                     }
-                } else if(ready.equalsIgnoreCase("maintenance")){
-                    builder.setTitle("Server Under Maintenance");
-                    builder.setMessage("Please try later");
-                    builder.setCancelable(false);
-                    builder.setPositiveButton("Exit", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                            System.gc();
-                            System.exit(0);
-                        }
-                    });
-                    try {//do not remove try catch block
-                        builder.show();
-                    } catch (Exception e) {
-                        e.printStackTrace();
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
                     }
-                }
+                });
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
+
             }
         });
     }
