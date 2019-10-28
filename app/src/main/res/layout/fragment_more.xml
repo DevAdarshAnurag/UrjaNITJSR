@@ -20,8 +20,8 @@
         app:cardElevation="4dp">
 
         <ImageView
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_sponsors" />
     </androidx.cardview.widget.CardView>
@@ -36,8 +36,8 @@
         app:cardElevation="4dp">
 
         <ImageView
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_notifications" />
     </androidx.cardview.widget.CardView>
@@ -52,8 +52,8 @@
         app:cardElevation="4dp">
 
         <ImageView
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_maps" />
     </androidx.cardview.widget.CardView>
@@ -68,8 +68,8 @@
         app:cardElevation="4dp">
 
         <ImageView
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_insta" />
     </androidx.cardview.widget.CardView>
@@ -84,8 +84,8 @@
         app:cardElevation="4dp">
 
         <ImageView
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_facebook" />
     </androidx.cardview.widget.CardView>
@@ -100,8 +100,8 @@
         app:cardElevation="4dp">
 
         <ImageView
-            android:layout_width="124dp"
-            android:layout_height="124dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_rate" />
     </androidx.cardview.widget.CardView>
