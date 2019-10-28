@@ -30,8 +30,6 @@ import com.nitjsr.urja1920.R;
 public class HomeActivity extends AppCompatActivity {
 
     boolean exit = false;
-    private DatabaseReference dbRef;
-    private String ready = "";
     private int fid = R.id.navigation_live;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

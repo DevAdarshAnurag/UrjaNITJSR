@@ -18,9 +18,6 @@ public class ApplicationClass extends Application {
     public void onCreate() {
         super.onCreate();
 
-        //Whatsapp work done here...
-        //Fresco.initialize(this);
-
         //One signal work done here...
         OneSignal.startInit(this)
                 .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.None)
