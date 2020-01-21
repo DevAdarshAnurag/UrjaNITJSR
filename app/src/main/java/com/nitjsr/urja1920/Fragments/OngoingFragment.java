@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -35,10 +36,11 @@ import java.util.Locale;
  */
 public class OngoingFragment extends Fragment {
 
-    RecyclerView rvMatchesLive;
-    OngoingAdapter adapter;
+    private RecyclerView rvMatchesLive;
+    private RelativeLayout progressBar;
+    private OngoingAdapter adapter;
     private DatabaseReference dbRef;
-    TextView textView;
+    private TextView textView;
 
     public OngoingFragment() {
         // Required empty public constructor
@@ -54,6 +56,7 @@ public class OngoingFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        progressBar = view.findViewById(R.id.ongoing_progress_bar);
         rvMatchesLive = view.findViewById(R.id.rv_matxhes_live);
         List<Fixture> fixtureList = new ArrayList<>();
         textView = view.findViewById(R.id.tv_ongoing);
@@ -63,7 +66,7 @@ public class OngoingFragment extends Fragment {
         fixtureFetch(fixtureList);
     }
 
-    void sort(List<Fixture> fixtureList) {
+    private void sort(List<Fixture> fixtureList) {
         //Comparator for sorting
         Collections.sort(fixtureList, new Comparator<Fixture>() {
             @Override
@@ -91,7 +94,7 @@ public class OngoingFragment extends Fragment {
         });
     }
 
-    void fixtureFetch(List<Fixture> fixtureList) {
+    private void fixtureFetch(List<Fixture> fixtureList) {
         dbRef = FirebaseDatabase.getInstance().getReference("Fixtures");
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -109,6 +112,7 @@ public class OngoingFragment extends Fragment {
                 else
                     textView.setVisibility(View.GONE);
                 adapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override

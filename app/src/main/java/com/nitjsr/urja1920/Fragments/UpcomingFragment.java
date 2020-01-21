@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -38,7 +39,7 @@ import java.util.Locale;
  */
 public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItemClicked {
 
-
+    private RelativeLayout progressBar;
     RecyclerView rvUpcoming;
     UpcomingAdapter adapter;
     List<Fixture> fixtureList = new ArrayList<>();
@@ -60,7 +61,7 @@ public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItem
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
+        progressBar = view.findViewById(R.id.upcoming_progress_bar);
         String tabNames[] = {"ALL", "CRICKET", "FOOTBALL", "BASKETBALL", "VOLLEYBALL", "BADMINTON", "CHESS", "HOCKEY", "TABLE TENNIS", "ATHLETICS"};
         TabLayout tabLayout = view.findViewById(R.id.tab_upcomings);
         for (int i = 0; i < 10; i++) {
@@ -118,6 +119,7 @@ public class UpcomingFragment extends Fragment implements UpcomingAdapter.onItem
                 else
                     textView.setVisibility(View.GONE);
                 adapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override

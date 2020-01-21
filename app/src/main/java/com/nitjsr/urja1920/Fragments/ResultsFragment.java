@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -36,6 +37,7 @@ import java.util.Locale;
  */
 public class ResultsFragment extends Fragment {
 
+    private RelativeLayout progressBar;
     RecyclerView rvResults;
     ResultsAdapter adapter;
     private DatabaseReference dbRef;
@@ -56,6 +58,7 @@ public class ResultsFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        progressBar = view.findViewById(R.id.results_progress_bar);
         String tabNames[] = {"ALL", "CRICKET", "FOOTBALL", "BASKETBALL", "VOLLEYBALL", "BADMINTON", "CHESS", "HOCKEY", "TABLE TENNIS", "ATHLETICS"};
         TabLayout tabLayout = view.findViewById(R.id.tab_results);
         for (int i = 0; i < 10; i++) {
@@ -138,6 +141,7 @@ public class ResultsFragment extends Fragment {
                 }
                 sort(fixtureList);
                 adapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
                 if(fixtureList.isEmpty())
                     textView.setVisibility(View.VISIBLE);
                 else

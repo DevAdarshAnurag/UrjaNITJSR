@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,10 +47,11 @@ public class LeaderboardFragment extends Fragment {
 
     @Override
     public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
-        List<Leaderboard> leaderboardList = new ArrayList();
+        List<Leaderboard> leaderboardList = new ArrayList<>();
         RecyclerView rvLeaderboard = view.findViewById(R.id.rv_leaderboard);
         rvLeaderboard.setLayoutManager(new LinearLayoutManager(getActivity()));
         LeaderboardAdapter adapter = new LeaderboardAdapter(leaderboardList);
+        RelativeLayout progressBar = view.findViewById(R.id.leaderboard_progress_bar);
         rvLeaderboard.setAdapter(adapter);
         dbRef = FirebaseDatabase.getInstance().getReference("Leaderboard");
         dbRef.addValueEventListener(new ValueEventListener() {
@@ -90,6 +93,7 @@ public class LeaderboardFragment extends Fragment {
                     }
                 });
                 adapter.notifyDataSetChanged();
+                progressBar.setVisibility(View.GONE);
             }
 
             @Override
